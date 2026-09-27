@@ -1,0 +1,116 @@
+/* Global: fonts, reset, base elements and components shared by several sections */
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../font/AvenirLTStd-Light.woff2") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../font/AvenirLTStd-Book.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../font/AvenirLTStd-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../font/AvenirLTStd-Heavy.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url("../font/AvenirLTStd-Black.woff2") format("woff2");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Magallanes";
+  src: url("../font/MagallanesBold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Magallanes";
+  src: url("../font/MagallanesExtraBold.woff2") format("woff2");
+  font-weight: 800;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Avenir", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #ffffff;
+  color-scheme: light;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.review-stars {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin: 14px 0 0;
+  position: relative;
+  top: -4px;
+  font-family: "Avenir", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgb(255, 176, 0);
+}
+
+@media (min-width: 769px) {
+  body {
+    font-size: 16px;
+  }
+
+  .review-stars {
+    margin-top: 17px;
+    top: -8px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1101px) {
+  .review-stars {
+    gap: 2px;
+    margin-top: 25px;
+    top: -13px;
+    font-size: 18px;
+  }
+}

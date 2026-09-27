@@ -1,0 +1,351 @@
+/* Angie's story (.second-frame) */
+
+.second-frame {
+  display: block;
+  width: 100%;
+  padding: 35px 16px 40px;
+}
+
+.second-container {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  max-width: none;
+  margin: 0 auto;
+  flex-direction: column;
+  width: 100%;
+}
+
+.angie-image {
+  border-radius: 12px;
+  overflow: hidden;
+  grid-area: 1 / 1 / 4;
+  order: 2;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.angie-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.angie-text {
+  grid-area: 1 / 2;
+  order: 1;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.my-story {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: #eee8ff;
+  color: #5e2ca5;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.intro-duction {
+  display: block;
+  margin: 18px 0 0;
+  font-size: 32px;
+  line-height: 1.08;
+  color: #30204a;
+  margin-top: 12px;
+}
+
+.role-text {
+  display: block;
+  margin: 20px 0 0;
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.25;
+  color: #5e2ca5;
+  margin-top: 12px;
+}
+
+.bedtime-text {
+  display: block;
+  margin: 22px 0 0;
+  max-width: 600px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #30204a;
+  margin-top: 15px;
+}
+
+.night-text {
+  grid-area: 2 / 2;
+  font-weight: 700;
+  margin: 0;
+  order: 3;
+  width: 100%;
+  margin-top: 25px;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.benefits-picture {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 12px;
+  grid-area: 3 / 2;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  order: 4;
+  width: 100%;
+  margin-top: 18px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.benefit-text {
+  font-size: 11px;
+  line-height: 1.15;
+  font-weight: 700;
+  color: #30204a;
+}
+
+.benefits-picture .benefit-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #c83232;
+}
+
+.benefits-picture .benefit-icon img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.intro-duction {
+  font-family: "Magallanes", sans-serif;
+  font-weight: 800;
+}
+
+.role-text {
+  font-family: "Magallanes", sans-serif;
+  font-weight: 700;
+}
+
+.my-story {
+  font-family: "Avenir", sans-serif;
+  font-weight: 700;
+}
+
+.intro-duction {
+  font-synthesis: none;
+}
+
+.role-text {
+  font-synthesis: none;
+}
+
+@media (min-width: 769px) {
+  .second-frame {
+    padding: 65px 30px;
+  }
+
+  .second-container {
+    display: grid;
+    grid-template-columns: minmax(0px, 0.95fr) minmax(0px, 1.05fr);
+    gap: 18px 45px;
+    max-width: 1000px;
+    flex-direction: row;
+  }
+
+  .angie-image {
+    border-radius: 16px;
+    order: 0;
+  }
+
+  .angie-image img {
+    height: 100%;
+    border-radius: 16px;
+    min-height: 500px;
+    object-fit: cover;
+  }
+
+  .angie-text {
+    order: 0;
+    margin-top: 0;
+  }
+
+  .my-story {
+    padding: 5px 11px;
+    font-size: 11px;
+  }
+
+  .intro-duction {
+    font-size: clamp(32px, 4vw, 42px);
+    line-height: 1.06;
+    margin-top: 15px;
+  }
+
+  .role-text {
+    max-width: 480px;
+    font-size: clamp(21px, 2.6vw, 27px);
+    margin-top: 16px;
+  }
+
+  .bedtime-text {
+    max-width: 480px;
+    font-size: 14px;
+    margin-top: 17px;
+  }
+
+  .night-text {
+    order: 0;
+    width: auto;
+    margin-top: 0;
+    font-size: 14px;
+  }
+
+  .benefits-picture {
+    gap: 14px 20px;
+    order: 0;
+    margin-top: 0;
+  }
+
+  .benefit-item {
+    gap: 9px;
+  }
+
+  .benefit-text {
+    font-size: 13px;
+  }
+
+  .benefits-picture .benefit-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .benefits-picture .benefit-icon img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (min-width: 1101px) {
+  .second-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .angie-image img {
+    height: auto;
+    min-height: auto;
+    object-fit: fill;
+  }
+
+  .role-text {
+    max-width: 600px;
+  }
+
+  .bedtime-text {
+    max-width: 600px;
+  }
+
+  .second-frame {
+    padding: 80px 40px;
+  }
+
+  .second-container {
+    display: grid;
+    gap: 20px 80px;
+    max-width: 1280px;
+    flex-direction: row;
+    width: auto;
+  }
+
+  .angie-image {
+    border-radius: 20px;
+    order: 0;
+    width: auto;
+  }
+
+  .angie-image img {
+    width: auto;
+    border-radius: 0;
+  }
+
+  .angie-text {
+    order: 0;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .my-story {
+    padding: 5px 12px;
+    font-size: 12px;
+  }
+
+  .intro-duction {
+    font-size: 44px;
+    line-height: 1.1;
+    margin-top: 18px;
+  }
+
+  .role-text {
+    font-size: 30px;
+    line-height: 1.3;
+    margin-top: 20px;
+  }
+
+  .bedtime-text {
+    font-size: 16px;
+    margin-top: 22px;
+  }
+
+  .night-text {
+    order: 0;
+    width: auto;
+    margin-top: 0;
+    line-height: normal;
+    font-size: 16px;
+  }
+
+  .benefits-picture {
+    gap: 18px 50px;
+    order: 0;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .benefit-item {
+    gap: 12px;
+    min-width: auto;
+  }
+
+  .benefit-text {
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
+  .benefits-picture .benefit-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .benefits-picture .benefit-icon img {
+    width: 56px;
+    height: 56px;
+  }
+}
