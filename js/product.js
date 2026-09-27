@@ -11,6 +11,17 @@ function copyImage(from, to) {
   to.src = from.src;
 }
 
+function showColor(img, color) {
+  if (!img || !color.dataset.image) return;
+
+  if (color.dataset.srcset) {
+    img.srcset = color.dataset.srcset;
+  } else {
+    img.removeAttribute("srcset");
+  }
+  img.src = color.dataset.image;
+}
+
 function initProductGallery(section) {
   const trigger = section.querySelector(".main-product-image");
   const mainImg = trigger?.querySelector("img");
@@ -140,7 +151,7 @@ function initPurchaseOptions(section) {
   });
 
   initPicker(onePod.querySelector(".color-options"), ".color-option", (color) => {
-    if (onePreview && color.dataset.image) onePreview.src = color.dataset.image;
+    showColor(onePreview, color);
     updateLabel(oneLabel, "color", color.dataset.color);
   });
 
@@ -153,7 +164,7 @@ function initPurchaseOptions(section) {
     });
 
     initPicker(pod.querySelector(".two-color-options"), ".two-color", (color) => {
-      if (preview && color.dataset.image) preview.src = color.dataset.image;
+      showColor(preview, color);
       updateLabel(label, "color", color.dataset.color);
     });
   });

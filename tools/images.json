@@ -22,5 +22,11 @@
   "img/8/review-master.png": [128, 260],
   "img/8/review-master-1.png": [128, 260],
   "img2/image-12314.png": [256, 470],
-  "img2/image-12327.png": [384, 768, 1024, 1440]
+  "img2/image-12327.png": [384, 768, 1024, 1440],
+  "img/new/01-pink-leopard.png": [128, 256],
+  "img/new/02-blue-stars.png": [128, 256],
+  "img/new/03-green-camo.png": [128, 256],
+  "img/new/04-gray.png": [128, 256],
+  "img/new/05-teal.png": [128, 256],
+  "img/new/06-ruby.png": [128, 256]
 }

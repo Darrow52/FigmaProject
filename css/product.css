@@ -204,6 +204,12 @@
   height: 90px;
 }
 
+/* the color photos have a white background: multiply blends it into the card */
+.product-preview img,
+.two-product-image img {
+  mix-blend-mode: multiply;
+}
+
 .product-preview img {
   width: 70px;
   height: 90px;
