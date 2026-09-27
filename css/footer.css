@@ -148,7 +148,7 @@ footer .email-input input:focus-visible,
   flex-direction: column;
   width: 100%;
   grid-template-columns: 1fr 1fr;
-  column-gap: 25px;
+  gap: 20px 25px;
   align-items: start;
   grid-column: 1 / 3;
   margin-top: 15px;
@@ -292,7 +292,7 @@ footer .email-input input:focus-visible,
   font-synthesis: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   footer {
     min-height: 0px;
     padding-bottom: 0px;
@@ -347,14 +347,15 @@ footer .email-input input:focus-visible,
     line-height: 1.25;
   }
 
+  /* social icons above the menu: side by side the menu gets too narrow */
   .footer-column.last-column {
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-columns: 1fr;
     margin-top: 5px;
   }
 
   .footer-social {
-    align-items: center;
+    align-items: flex-start;
   }
 
   .social-link {
@@ -587,8 +588,17 @@ footer .email-input input:focus-visible,
   }
 }
 
+/* wide enough for the icons and the menu side by side: columns take the
+   width of their content, the free space goes between them */
 @media (min-width: 1340px) {
+  .footer-links {
+    grid-template-columns: repeat(3, auto);
+    justify-content: space-between;
+    column-gap: 35px;
+  }
+
   .footer-column.last-column {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
+    column-gap: 30px;
   }
 }

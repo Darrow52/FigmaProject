@@ -316,7 +316,7 @@
   font-synthesis: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .single-night {
     display: inline-block;
     color: rgb(94, 44, 165);

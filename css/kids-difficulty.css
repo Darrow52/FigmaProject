@@ -1,4 +1,5 @@
-/* Why bedtime is hard (.kids-difficulty, .kids-carousel) */
+/* Why bedtime is hard (section.why-it-happens: .kids-difficulty heading block
+   + .kids-carousel cards; the section itself has no styles of its own) */
 
 .why-happens {
   display: inline-flex;
@@ -310,7 +311,7 @@
   font-synthesis: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .why-happens {
     padding: 6px 14px;
     font-size: 11px;

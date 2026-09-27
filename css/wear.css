@@ -98,7 +98,7 @@
   color: rgb(48, 32, 74);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .sixth-frame {
     padding: 65px 30px;
   }

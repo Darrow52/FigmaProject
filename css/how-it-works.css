@@ -427,11 +427,13 @@
   z-index: 2;
 }
 
-.benefits-carousel:hover .benefits-track {
+/* pause the marquee on hover and with the pause button (js/marquee.js) */
+.benefits-carousel:hover .benefits-track,
+.benefits-carousel.is-paused .benefits-track {
   animation-play-state: paused;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .the-solution {
     display: inline-block;
     padding-right: 11px;

@@ -159,7 +159,7 @@
   font-synthesis: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .second-frame {
     padding: 65px 30px;
   }

@@ -361,7 +361,7 @@
   z-index: 2;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .hero-container {
     max-width: 1000px;
     padding: 35px 30px;

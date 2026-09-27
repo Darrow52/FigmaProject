@@ -174,11 +174,16 @@
   font-synthesis: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
+  /* the kids picture sits in the bottom right corner; the right padding
+     keeps the text next to it instead of under it (picture is 470×283) */
   .challenge-banner {
+    --kids-height: clamp(170px, 22vw, 225px);
+    --kids-right: 18px;
+
     align-items: center;
     min-height: 270px;
-    padding-right: 30px;
+    padding-right: calc(var(--kids-right) + var(--kids-height) * 470 / 283 + 20px);
     padding-bottom: 35px;
     padding-left: 30px;
     height: auto;
@@ -186,7 +191,7 @@
 
   .challenge-content {
     width: 650px;
-    max-width: 70%;
+    max-width: 100%;
   }
 
   .challenge-badge {
@@ -213,8 +218,10 @@
 
   .challenge-benefits {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 24px;
+    justify-content: center;
+    gap: 12px 24px;
     margin-top: 22px;
     grid-template-columns: none;
     position: static;
@@ -256,8 +263,8 @@
   }
 
   .challenge-kids {
-    right: 18px;
-    height: 225px;
+    right: var(--kids-right);
+    height: var(--kids-height);
     left: auto;
     z-index: auto;
     transform: none;
@@ -276,26 +283,27 @@
 }
 
 @media (min-width: 1101px) {
-  .challenge-banner {
-    padding-bottom: 0px;
-  }
-
   .benefit-info span {
     margin-top: 4px;
   }
 
+  /* wider than 1440px: the text + picture group stays as on 1440, centered */
   .challenge-banner {
+    --kids-height: 290px;
+    --kids-right: calc(max(0px, (100% - 1440px) / 2) + 35px);
+
     align-items: center;
     min-height: 315px;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-top: 0;
+    padding-right: calc(var(--kids-right) + var(--kids-height) * 470 / 283 + 40px);
+    padding-bottom: 0;
+    padding-left: calc(max(0px, (100% - 1440px) / 2) + 30px);
     height: auto;
   }
 
   .challenge-content {
     width: 700px;
-    max-width: none;
+    max-width: 100%;
   }
 
   .challenge-badge {
@@ -326,7 +334,7 @@
   .challenge-benefits {
     display: flex;
     align-items: center;
-    gap: 38px;
+    gap: 14px 38px;
     margin-top: 28px;
     grid-template-columns: none;
     width: auto;
@@ -366,18 +374,6 @@
   .benefit-info span {
     font-size: 14px;
     line-height: 1.2;
-  }
-
-  .challenge-kids {
-    right: 35px;
-    height: 290px;
-    left: auto;
-    z-index: auto;
-    transform: none;
-  }
-
-  .challenge-kids img {
-    max-width: 100%;
   }
 
   .challenge-benefit:nth-child(3) {
