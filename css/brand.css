@@ -49,7 +49,6 @@
   animation-play-state: paused;
 }
 
-
 @media (hover: hover) {
   .brand-visual:hover .brand-track {
     animation-play-state: paused;

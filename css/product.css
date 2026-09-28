@@ -1,6 +1,12 @@
 /* Product: gallery, purchase options, lightbox (.seventh-frame) */
 
-:where(.main-product-image, .size-option, .two-size, .color-option, .two-color) {
+:where(
+  .main-product-image,
+  .size-option,
+  .two-size,
+  .color-option,
+  .two-color
+) {
   appearance: none;
   margin: 0;
   padding: 0;
@@ -252,7 +258,6 @@
   max-width: 50%;
   overflow: hidden;
 }
-
 
 .color-options {
   display: flex;
@@ -873,7 +878,6 @@
   display: flex;
 }
 
-
 html:has(.lightbox[open]) {
   overflow: hidden;
 }
@@ -1087,7 +1091,6 @@ html:has(.lightbox[open]) {
     font-size: 11px;
     padding: 6px;
   }
-
 
   .color-options {
     gap: 7px;
@@ -1526,7 +1529,6 @@ html:has(.lightbox[open]) {
     font-size: 13px;
     padding: 8px;
   }
-
 
   .color-options {
     gap: 10px;

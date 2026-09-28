@@ -8,7 +8,6 @@
   color: #30204a;
 }
 
-
 .hs-banner-moon {
   display: none;
   fill: none;
@@ -17,7 +16,6 @@
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-
 
 .hs-banner-moon-fill {
   fill: #eee8ff;
@@ -49,7 +47,6 @@
   line-height: 1.25;
   color: #5e2ca5;
 }
-
 
 .hs-banner-brand {
   display: flex;
@@ -128,7 +125,6 @@
     font-size: 17px;
   }
 
-
   .hs-banner-brand {
     flex-shrink: 0;
     gap: 20px;
@@ -199,7 +195,6 @@
   .comes-in img {
     width: 100px;
   }
-
 
   .hs-banner-icon {
     position: relative;

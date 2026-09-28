@@ -183,7 +183,9 @@
 
     align-items: center;
     min-height: 270px;
-    padding-right: calc(var(--kids-right) + var(--kids-height) * 470 / 283 + 20px);
+    padding-right: calc(
+      var(--kids-right) + var(--kids-height) * 470 / 283 + 20px
+    );
     padding-bottom: 35px;
     padding-left: 30px;
     height: auto;
@@ -295,7 +297,9 @@
     align-items: center;
     min-height: 315px;
     padding-top: 0;
-    padding-right: calc(var(--kids-right) + var(--kids-height) * 470 / 283 + 40px);
+    padding-right: calc(
+      var(--kids-right) + var(--kids-height) * 470 / 283 + 40px
+    );
     padding-bottom: 0;
     padding-left: calc(max(0px, (100% - 1440px) / 2) + 30px);
     height: auto;

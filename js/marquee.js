@@ -6,16 +6,11 @@
    With a mouse the marquee also pauses on hover (CSS).
    ========================= */
 
-// how far the finger has to move before it counts as a swipe, not a tap
 const SWIPE_THRESHOLD = 8;
 
-// Moves the CSS animation of the track by `dx` pixels.
-// One animation loop moves the track by the width of one group of logos,
-// so the pixel offset is turned into animation time.
 function moveMarquee(track, dx) {
   const animation = track.getAnimations()[0];
 
-  // no animation with prefers-reduced-motion: nothing to move
   if (!animation) {
     return;
   }
@@ -47,7 +42,6 @@ function initMarquee(marquee) {
   marquee.addEventListener("pointerdown", (event) => {
     isMouse = event.pointerType === "mouse";
 
-    // mouse: only the main (left) button drags
     if (isMouse && event.button !== 0) {
       return;
     }
@@ -55,7 +49,6 @@ function initMarquee(marquee) {
     lastX = event.clientX;
   });
 
-  // no browser drag-and-drop of the logo images, the mouse drags the strip
   marquee.addEventListener("dragstart", (event) => event.preventDefault());
 
   marquee.addEventListener("pointermove", (event) => {
@@ -67,7 +60,6 @@ function initMarquee(marquee) {
         return;
       }
       isSwiping = true;
-      // .is-dragging stops the animation while the finger moves it
       marquee.classList.add("is-dragging");
       marquee.setPointerCapture(event.pointerId);
     }
@@ -80,14 +72,12 @@ function initMarquee(marquee) {
     if (startX === null) {
       return;
     }
-    // a tap pauses on touch screens; with a mouse hover already pauses it
     if (!isSwiping && !isMouse) {
       marquee.classList.toggle("is-paused");
     }
     reset();
   });
 
-  // the touch turned into a page scroll (vertical swipe)
   marquee.addEventListener("pointercancel", reset);
 }
 
