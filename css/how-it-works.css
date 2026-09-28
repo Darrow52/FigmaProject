@@ -219,6 +219,8 @@
   padding: 10px 0;
   background-color: rgb(219, 233, 255);
   overflow: hidden;
+  touch-action: pan-y;
+  user-select: none;
 }
 
 .sleep-benefits > * {
@@ -427,10 +429,23 @@
   z-index: 2;
 }
 
-/* pause the marquee on hover and with the pause button (js/marquee.js) */
-.benefits-carousel:hover .benefits-track,
-.benefits-carousel.is-paused .benefits-track {
+.benefits-carousel.is-paused .benefits-track,
+.benefits-carousel.is-dragging .benefits-track {
   animation-play-state: paused;
+}
+
+@media (hover: hover) {
+  .benefits-carousel:hover .benefits-track {
+    animation-play-state: paused;
+  }
+
+  .benefits-carousel {
+    cursor: grab;
+  }
+
+  .benefits-carousel.is-dragging {
+    cursor: grabbing;
+  }
 }
 
 @media (min-width: 768px) {

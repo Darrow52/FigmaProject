@@ -11,13 +11,14 @@
 }
 
 .brand-visual {
-  position: relative;
   display: block;
   width: 100%;
   height: 78px;
   padding: 19px 0;
   background-color: #dbe9ff;
   overflow: hidden;
+  touch-action: pan-y;
+  user-select: none;
 }
 
 .brand-track {
@@ -43,10 +44,24 @@
   flex-shrink: 0;
 }
 
-/* pause the marquee on hover and with the pause button (js/marquee.js) */
-.brand-visual:hover .brand-track,
-.brand-visual.is-paused .brand-track {
+.brand-visual.is-paused .brand-track,
+.brand-visual.is-dragging .brand-track {
   animation-play-state: paused;
+}
+
+
+@media (hover: hover) {
+  .brand-visual:hover .brand-track {
+    animation-play-state: paused;
+  }
+
+  .brand-visual {
+    cursor: grab;
+  }
+
+  .brand-visual.is-dragging {
+    cursor: grabbing;
+  }
 }
 
 @media (min-width: 768px) {
