@@ -2192,20 +2192,33 @@
           </div>
         </div>
         <div class="sleeping-image">
-          <img
-            src="img2/image-12327.png"
-            srcset="
-              img-opt/img2/image-12327-384.webp   384w,
-              img-opt/img2/image-12327-768.webp   768w,
-              img-opt/img2/image-12327-1024.webp 1024w,
-              img-opt/img2/image-12327-1440.webp 1440w
-            "
-            sizes="(min-width: 1101px) 1920px, (min-width: 768px) 1100px, 768px"
-            alt=""
-            width="1440"
-            height="639"
-            loading="lazy"
-          />
+          <!-- phones: a tall photo behind the whole block (design);
+               from tablets: the wide photo at the bottom -->
+          <picture>
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                img-opt/img2/image-12327-768.webp   768w,
+                img-opt/img2/image-12327-1024.webp 1024w,
+                img-opt/img2/image-12327-1440.webp 1440w
+              "
+              sizes="(min-width: 1101px) 1920px, 1100px"
+              width="1440"
+              height="639"
+            />
+            <img
+              src="img2/better-sleep-mobile.png"
+              srcset="
+                img-opt/img2/better-sleep-mobile-390.webp 390w,
+                img-opt/img2/better-sleep-mobile-780.webp 780w
+              "
+              sizes="100vw"
+              alt=""
+              width="780"
+              height="1342"
+              loading="lazy"
+            />
+          </picture>
         </div>
       </section>
     </main>
