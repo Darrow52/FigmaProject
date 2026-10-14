@@ -370,8 +370,6 @@
 }
 
 @media (min-width: 1101px) {
-  /* arrows are 32px from the cards (cards are 24px apart): the arrow
-     columns are 8px wider than the arrows; the whole row is centered */
   .reviews-carousel {
     grid-template-columns: 44px minmax(0, 536px) minmax(0, 536px) 44px;
     justify-content: center;
@@ -476,8 +474,6 @@
     line-height: 16px;
   }
 
-  /* the shared stars (global.css) are shifted up; here they sit 32px
-     under the "Verified Buyer" row as in the design */
   .review-text .review-stars {
     margin-top: 32px;
     top: 0;

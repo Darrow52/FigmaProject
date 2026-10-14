@@ -8,17 +8,9 @@
   color: #30204a;
 }
 
+/* moon icon from the design: tablets and desktop only */
 .hs-banner-moon {
   display: none;
-  fill: none;
-  stroke: #3d2b6b;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.hs-banner-moon-fill {
-  fill: #eee8ff;
 }
 
 .hs-banner-text {
@@ -158,15 +150,15 @@
 @media (min-width: 1101px) {
   .hs-banner {
     width: calc(100% - 80px);
-    /* no space below: The Solution starts with its own 80px padding (design) */
     margin: 80px auto 0;
     padding: 32px 49px 32px 40px;
     border-radius: 18px;
   }
 
+  /* icon at 37/38px from the banner corner, text at 198px (design) */
   .hs-banner-moon {
     width: 105px;
-    margin-right: 53px;
+    margin: 4px 56px 0 -3px;
   }
 
   .tired-body {

@@ -56,7 +56,6 @@
   position: relative;
   display: block;
   width: 100%;
-  /* 72px with the border (design) */
   padding: 26px 35px 25px 0;
   border-bottom: 1px solid rgb(222, 213, 245);
 }
@@ -82,7 +81,6 @@
   font-synthesis: none;
 }
 
-/* open question: the question turns purple, the "-" stays dark (design) */
 .question.open .ask {
   color: rgb(94, 44, 165);
 }
@@ -94,7 +92,6 @@
 
 .faq-toggle {
   position: absolute;
-  /* the +/- is centred on the first line of the question (design) */
   top: 22px;
   right: 0px;
   display: flex;
@@ -127,7 +124,6 @@
 }
 
 .faq-toggle {
-  /* the +/- glyph keeps the body font (the question itself is Magallanes) */
   font-family: "Avenir", sans-serif;
   font-weight: 700;
 }
@@ -203,8 +199,7 @@
 }
 
 @media (min-width: 1101px) {
-  /* 383px + 148px + 669px on 1440; on narrower screens the gap shrinks
-     first, then the list column */
+
   .faq-frame {
     grid-template-columns: minmax(0, 383px) minmax(0, 669px);
     justify-content: center;
@@ -214,8 +209,6 @@
     margin: 0;
     padding: 80px 32px;
   }
-
-  /* "Frequently" / "Asked Questions" (design) */
   .frequently-asked {
     display: inline;
     font-size: 44px;

@@ -57,8 +57,6 @@ body {
 body {
   font-family: "Avenir", sans-serif;
   font-size: 14px;
-  /* the design sets body text in Avenir 55 Roman / 65 Medium: the project
-     has no Roman file, the closest one is Medium (Book = 400 is too thin) */
   font-weight: 500;
   background-color: #ffffff;
   color-scheme: light;
@@ -82,17 +80,15 @@ img {
   border: 0;
 }
 
-/* line break that exists only in the desktop design (phones and tablets wrap freely) */
 .desktop-break {
   display: none;
 }
 
-/* purple part of a two-colour heading (design) */
+
 .title-accent {
   color: rgb(94, 44, 165);
 }
 
-/* line break that exists only in the phone design */
 .mobile-break {
   display: inline;
 }

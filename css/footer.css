@@ -586,7 +586,6 @@ footer .email-input input:focus-visible,
     width: 22px;
   }
 
-  /* below 1340px the link columns are taller: the text stays in the flow */
   .legal-text {
     margin: 40px auto 0;
     width: auto;
@@ -605,8 +604,6 @@ footer .email-input input:focus-visible,
   }
 }
 
-/* wide enough for the icons and the menu side by side: columns take the
-   width of their content, the free space goes between them */
 @media (min-width: 1340px) {
   .footer-links {
     grid-template-columns: 160px 117px 1fr;
@@ -618,8 +615,6 @@ footer .email-input input:focus-visible,
     grid-template-columns: 201px 166px;
     column-gap: 36px;
   }
-
-  /* the design: the text sits 77px above the bottom edge */
   .legal-text {
     position: absolute;
     bottom: 77px;
@@ -629,7 +624,7 @@ footer .email-input input:focus-visible,
     transform: translateX(-50%);
   }
 
-  /* 48px lines as in the design (links on one line only from here) */
+
   .footer-link,
   .footer-menu .footer-link {
     margin-bottom: 10px;

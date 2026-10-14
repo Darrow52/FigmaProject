@@ -62,7 +62,6 @@
   display: inline;
 }
 
-/* one card = photo + title + text, so they can never get out of order */
 .wear-cards {
   display: flex;
   flex-direction: column;
@@ -213,8 +212,6 @@
     letter-spacing: 0;
   }
 
-  /* Avenir Medium is a little wider than the design's Roman: 4px of extra
-     room (into the gap between cards) keeps the design's line breaks */
   .wear-card-text {
     max-width: none;
     margin-top: 16px;

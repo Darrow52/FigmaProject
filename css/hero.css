@@ -96,7 +96,7 @@
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  padding: 11px 13px; /* 14px 16px in Figma, minus the 3px border */
+  padding: 11px 13px; 
   background-color: white;
   border: 2px solid #d9c8ff;
   border-width: 3px;
@@ -258,7 +258,7 @@
   width: 100px;
 }
 
-/* phones: one big cloud at the bottom (the others are hidden further down) */
+
 .cloud-mobile {
   right: -185px;
   bottom: 0;
@@ -349,8 +349,7 @@
   pointer-events: none;
 }
 
-/* phones: only the small stars (on the photo) and the big bottom cloud;
-   after .decor-cloud / .decor-stars so that display: none wins */
+
 .cloud-top-left,
 .cloud-top-center,
 .cloud-bottom-left,
@@ -380,7 +379,7 @@
   pointer-events: none;
 }
 
-/* decor sits above the photo and the text, the review card above the decor */
+
 .hero-decor {
   z-index: 3;
 }
@@ -390,7 +389,7 @@
 }
 
 
-/* the row of reviews is a bit wider than a 375px phone: shrink it there */
+
 @media (min-width: 390px) {
   .happy-customer {
     transform: none;
@@ -609,7 +608,6 @@
     padding: 28px 23px 25px 65px;
     flex-direction: row;
     width: auto;
-    /* 144px on the 1440 design, shrinking to 40px at 1101 so the text column keeps ~440px */
     gap: clamp(40px, 30.68vw - 298px, 144px);
   }
 
@@ -668,9 +666,9 @@
     padding: 11px 13px;
     border-width: 3px;
     border-radius: 16px;
-    left: 19.8%; /* 140px of the 706px photo */
+    left: 19.8%; 
     bottom: 38px;
-    width: 73.9%; /* 522px */
+    width: 73.9%;
   }
 
   .woman-comment > img {

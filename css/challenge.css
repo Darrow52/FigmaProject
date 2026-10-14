@@ -129,7 +129,6 @@
   font-weight: 500;
 }
 
-/* phones: the whole picture as a block under the text (design) */
 .challenge-kids {
   position: relative;
   z-index: 1;
@@ -173,8 +172,7 @@
 }
 
 @media (min-width: 768px) {
-  /* the kids picture sits in the bottom right corner; the right padding
-     keeps the text next to it instead of under it (picture is 470×283) */
+
   .challenge-banner {
     --kids-height: clamp(170px, 22vw, 225px);
     --kids-right: 18px;
@@ -301,8 +299,6 @@
     margin-top: 4px;
   }
 
-  /* the picture touches the right edge of the 1440 frame (design);
-     wider than 1440px the text + picture group stays as on 1440, centered */
   .challenge-banner {
     --kids-height: 283px;
     --kids-right: max(0px, (100% - 1440px) / 2);

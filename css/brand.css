@@ -29,7 +29,6 @@
   animation: 25s linear 0s infinite normal none running brand-scroll;
 }
 
-/* padding-right = gap, so the seam between the two groups has the same gap */
 .brand-group {
   display: flex;
   align-items: center;

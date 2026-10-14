@@ -162,11 +162,9 @@
   gap: 32px;
   flex-shrink: 0;
   height: 40px;
-  /* same gap after the last item: the next group follows seamlessly */
   padding-right: 32px;
 }
 
-/* icon in a circle + text (design: Magallanes Bold 18/22, 12px apart) */
 .marquee-item {
   display: flex;
   align-items: center;
@@ -847,7 +845,6 @@
     grid-template-rows: 1fr 1fr;
     gap: 0 48px;
     align-items: center;
-    /* the design group sits 11px right of the centre: 22px extra on the left */
     max-width: 1139px;
     padding-left: 22px;
     margin-top: 40px;

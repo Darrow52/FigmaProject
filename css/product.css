@@ -83,10 +83,13 @@
   width: 24px;
   height: 24px;
   flex-shrink: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #f7f6fd;
   cursor: pointer;
 }
 
-/* arrows at the edges, thumbnails centred between them (design) */
 .gallery-arrow:first-child {
   margin-right: auto;
 }
@@ -97,8 +100,8 @@
 
 .gallery-arrow img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 7px;
+  height: 7px;
   object-fit: contain;
 }
 
@@ -111,28 +114,25 @@
   width: 45px;
   height: 45px;
   flex-shrink: 0;
-  border-radius: 7px;
+  padding: 0;
+  border: 1px solid #e3e0db;
+  border-radius: 8px;
+  background: none;
   overflow: hidden;
   cursor: pointer;
 }
 
 .thumbnail img {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  max-width: none;
+  margin: -2px;
   object-fit: cover;
 }
 
 .thumbnail.active {
-  display: block;
-  width: 48px;
-  height: 48px;
-  flex-shrink: 0;
-  border-radius: 7px;
-  overflow: hidden;
-  cursor: pointer;
-  outline: rgb(94, 44, 165) solid 2px;
-  outline-offset: 2px;
+  border-color: rgb(94, 44, 165);
 }
 
 .product-rating {
@@ -173,7 +173,6 @@
 
 .purchase-options {
   display: block;
-  /* phones: the box is a bit wider than the text column (design) */
   margin: 20px -7px 0;
   padding: 16px 12px;
   background-color: rgb(248, 247, 255);
@@ -223,7 +222,6 @@
   height: 64px;
 }
 
-/* the color photos have a white background: multiply blends it into the card */
 .product-preview img,
 .two-product-image img {
   mix-blend-mode: multiply;
@@ -319,7 +317,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* phones: as wide as the purchase box above (design) */
   width: calc(100% + 14px);
   height: 48px;
   margin: 16px -7px 0;
@@ -384,8 +381,6 @@
   object-fit: contain;
 }
 
-/* phones: the captions are wider than their columns by one gap and
-   centred over them, so each fits in two lines (design: up to 119px) */
 .delivery-item p {
   width: calc(100% + 18px);
   margin: 0;
@@ -692,8 +687,7 @@
   max-width: 100%;
 }
 
-/* narrow phones (< 375px): smaller preview column and padding,
-   so the size buttons and color swatches still have room */
+
 .one-pod-option.active .product-selection {
   display: grid;
   grid-template-columns: 64px minmax(0px, 1fr);
@@ -781,7 +775,6 @@
   flex-wrap: wrap;
   min-width: 0px;
   overflow: visible;
-  /* phones: a row of its own under the photo (design) */
   grid-column: 1 / -1;
   margin-top: 4px;
 }
@@ -950,7 +943,6 @@ html:has(.lightbox[open]) {
   font-weight: 700;
 }
 
-/* Avenir 95 Black in the design */
 .option-name,
 .option-price,
 .purchase-title,
@@ -1047,13 +1039,12 @@ html:has(.lightbox[open]) {
     height: 27px;
   }
 
-  .thumbnail {
-    width: 55px;
-    height: 55px;
-    border-radius: 8px;
+  .gallery-arrow img {
+    width: 9px;
+    height: 9px;
   }
 
-  .thumbnail.active {
+  .thumbnail {
     width: 55px;
     height: 55px;
     border-radius: 8px;
@@ -1480,16 +1471,15 @@ html:has(.lightbox[open]) {
     height: 22px;
   }
 
+  .gallery-arrow img {
+    width: 9.5px;
+    height: 9.5px;
+  }
+
   .thumbnail {
     width: 59px;
     height: 59px;
     border-radius: 11px;
-  }
-
-  .thumbnail.active {
-    width: 70px;
-    height: 70px;
-    border-radius: 10px;
   }
 
   .product-rating {
@@ -1782,9 +1772,6 @@ html:has(.lightbox[open]) {
     display: grid;
     gap: 60px;
     max-width: 1114px;
-    /* the design columns (424 + 60 + 534) overflow its 60px right padding by
-       24px; the design's 3px stroke is drawn inside the 40/60px padding,
-       here the border is outside it: 3px less on every side */
     padding: 37px 33px 37px 57px;
     border-width: 3px;
     border-radius: 40px;

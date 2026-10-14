@@ -61,8 +61,6 @@
   text-align: center;
 }
 
-/* ---------- three cards: photo, round icon over the photo's bottom edge,
-   title, text. Phones: one column, card k uses rows 4k+1 .. 4k+4 ---------- */
 
 .kids-carousel {
   display: grid;
@@ -112,8 +110,7 @@
   font-synthesis: none;
 }
 
-/* the design uses Magallanes Medium here; the project has no such font file,
-   Avenir is the closest available */
+
 .kids-carousel > p {
   display: block;
   margin: 8px 0 0;
@@ -147,8 +144,6 @@
 .difficult-reason:nth-of-type(3) { grid-row: 11; }
 .kids-carousel > p:nth-of-type(3) { grid-row: 12; }
 
-/* ---------- tablet and up: three cards side by side,
-   rows: photos / icons / titles / texts ---------- */
 
 @media (min-width: 768px) {
   .kids-difficulty {
@@ -240,7 +235,6 @@
   .kids-carousel > p:nth-of-type(3) { grid-column: 3; }
 }
 
-/* ---------- desktop: 1440 design, cards 3 x 382 with 27px gaps ---------- */
 
 @media (min-width: 1101px) {
   .kids-difficulty {

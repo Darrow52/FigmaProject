@@ -315,8 +315,6 @@
     margin-top: 16px;
   }
 
-  /* in the design this line is 9px wider than the text column (552px):
-     it keeps the two design lines */
   .role-text {
     max-width: none;
     margin-right: -9px;
