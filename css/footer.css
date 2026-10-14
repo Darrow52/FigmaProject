@@ -8,7 +8,8 @@ footer {
   overflow: hidden;
   background-color: rgb(6, 59, 91);
   color: white;
-  padding-bottom: 40px;
+  /* room for the corner picture under the text (design) */
+  padding-bottom: 100px;
 }
 
 .footer-container {
@@ -19,7 +20,7 @@ footer {
   gap: 35px;
   width: 100%;
   margin: 0 auto;
-  padding: 40px 20px 0;
+  padding: 68px 40px 0;
   flex-direction: column;
   max-width: none;
 }
@@ -28,36 +29,41 @@ footer {
   display: flex;
   flex-direction: column;
   width: 100%;
+  text-align: center;
 }
 
 .newsletter-title {
   display: block;
   margin: 0;
-  font-size: 27px;
-  line-height: 1.1;
+  font-size: 24px;
+  line-height: 34px;
   color: white;
 }
 
 .newsletter-description {
   display: block;
-  margin: 12px 0 0;
-  font-size: 12px;
-  line-height: 1.4;
+  margin: 26px 0 0;
+  /* Avenir 45 Book in the design */
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 26px;
   color: white;
 }
 
 .newsletter-form {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 21px;
+  /* the Avenir line box is taller than the text box in Figma */
   margin-top: 15px;
   width: 100%;
+  flex-direction: column;
 }
 
 .email-input {
   display: block;
   width: 100%;
-  height: 42px;
+  height: 50px;
   min-width: 0px;
 }
 
@@ -105,12 +111,12 @@ footer .email-input input:focus-visible,
   border: 0px;
   padding: 0;
   font-family: inherit;
-  width: 100px;
-  height: 42px;
+  width: 177px;
+  height: 44px;
   border-radius: 9px;
   background: linear-gradient(90deg, rgb(200, 107, 216), rgb(85, 32, 160));
   color: white;
-  font-size: 10px;
+  font-size: 14px;
   cursor: pointer;
   flex-shrink: 0;
 }
@@ -120,6 +126,7 @@ footer .email-input input:focus-visible,
   grid-template-columns: 1fr 1fr;
   gap: 0 20px;
   width: 100%;
+  margin-top: 7px;
 }
 
 .footer-column {
@@ -131,9 +138,9 @@ footer .email-input input:focus-visible,
 .footer-link {
   display: block;
   text-decoration: none;
-  margin-bottom: 15px;
-  font-size: 11px;
-  line-height: 1.2;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 44px;
   font-weight: 600;
   color: white;
   cursor: pointer;
@@ -151,21 +158,21 @@ footer .email-input input:focus-visible,
   gap: 20px 25px;
   align-items: start;
   grid-column: 1 / 3;
-  margin-top: 15px;
+  margin-top: 47px;
 }
 
 .footer-social {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
 }
 
 .social-icons {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 7px;
+  justify-content: center;
+  gap: 20px;
   margin: 0;
 }
 
@@ -174,42 +181,43 @@ footer .email-input input:focus-visible,
   text-decoration: none;
   align-items: center;
   justify-content: center;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 
 .social-link img {
   display: block;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
 }
 
 .copyright {
   display: block;
-  margin: 10px 0 0;
-  font-size: 10px;
+  margin: 33px 0 0;
+  font-size: 14px;
   line-height: 1.2;
   font-weight: 600;
   color: white;
-  text-align: left;
+  text-align: center;
 }
 
 .footer-menu {
   display: grid;
   flex-direction: column;
   width: 100%;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   column-gap: 15px;
+  margin-top: 12px;
 }
 
 .footer-menu .footer-link {
   display: block;
   text-decoration: none;
-  margin-bottom: 13px;
-  font-size: 11px;
-  line-height: 1.2;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 44px;
   font-weight: 600;
   color: white;
   cursor: pointer;
@@ -220,12 +228,12 @@ footer .email-input input:focus-visible,
   align-items: center;
   width: 25px;
   height: 18px;
-  margin-top: -3px;
+  margin-top: 18px;
 }
 
 .privacy-icon img {
   display: block;
-  width: 18px;
+  width: 21px;
   height: auto;
   object-fit: contain;
 }
@@ -240,11 +248,12 @@ footer .email-input input:focus-visible,
   display: block;
   width: 100%;
   text-align: center;
-  font-size: 9px;
-  line-height: 1.45;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 26px;
   letter-spacing: 0.3px;
   color: white;
-  padding: 0 20px;
+  padding: 0 18px;
 }
 
 .footer-corner.top-left {
@@ -319,7 +328,9 @@ footer .email-input input:focus-visible,
 
   .newsletter-form {
     gap: 8px;
+    margin-top: 26px;
     max-width: 470px;
+    flex-direction: row;
   }
 
   .email-input {
@@ -340,6 +351,7 @@ footer .email-input input:focus-visible,
 
   .footer-links {
     gap: 25px 30px;
+    margin-top: 0;
   }
 
   .footer-link {
@@ -376,6 +388,7 @@ footer .email-input input:focus-visible,
   .footer-menu {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 18px;
+    margin-top: 0;
   }
 
   .footer-menu .footer-link {
@@ -413,6 +426,10 @@ footer .email-input input:focus-visible,
   .footer-corner.bottom-right img {
     width: 170px;
   }
+
+  .newsletter {
+    text-align: left;
+  }
 }
 
 @media (min-width: 1101px) {
@@ -425,7 +442,7 @@ footer .email-input input:focus-visible,
   }
 
   .footer-link {
-    line-height: 1.2;
+    line-height: 24px;
   }
 
   .footer-column.last-column {
@@ -438,7 +455,7 @@ footer .email-input input:focus-visible,
   }
 
   .footer-menu .footer-link {
-    line-height: 1.2;
+    line-height: 24px;
   }
 
   .legal-text {
@@ -457,37 +474,40 @@ footer .email-input input:focus-visible,
   }
 
   footer {
-    min-height: 750px;
+    min-height: 803px;
     padding-bottom: 0px;
   }
 
   .footer-container {
     display: grid;
-    grid-template-columns: minmax(0, 510fr) minmax(0, 670fr);
-    column-gap: clamp(40px, 7vw, 100px);
+    grid-template-columns: 532px 1fr;
+    /* 124px on 1440, 40px on 1101 */
+    column-gap: clamp(40px, 24.8vw - 233px, 124px);
     width: 100%;
-    max-width: 1340px;
-    padding: 75px 30px 0;
+    /* wider than the 1440 design: the content stays centred */
+    max-width: 1440px;
+    padding: 82px 40px 0 64px;
   }
 
   .newsletter-title {
-    font-size: 36px;
-    line-height: 1.2;
+    font-size: 38px;
+    line-height: 48px;
   }
 
   .newsletter-description {
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 15px;
+    line-height: 26px;
   }
 
   .newsletter-form {
-    gap: 15px;
-    margin-top: 25px;
+    gap: 17px;
+    margin-top: 20px;
     width: auto;
   }
 
   .email-input {
-    width: 325px;
+    width: 336px;
     height: 50px;
     min-width: auto;
   }
@@ -499,8 +519,8 @@ footer .email-input input:focus-visible,
   }
 
   .subscribe-button {
-    width: 170px;
-    height: 50px;
+    width: 177px;
+    height: 52px;
     font-size: 14px;
   }
 
@@ -510,8 +530,8 @@ footer .email-input input:focus-visible,
   }
 
   .footer-link {
-    margin-bottom: 25px;
-    font-size: 15px;
+    margin-bottom: 34px;
+    font-size: 16px;
   }
 
   .footer-column.last-column {
@@ -526,7 +546,7 @@ footer .email-input input:focus-visible,
 
   .social-icons {
     justify-content: center;
-    gap: 10px;
+    gap: 13px;
   }
 
   .social-link {
@@ -540,7 +560,7 @@ footer .email-input input:focus-visible,
   }
 
   .copyright {
-    margin-top: 18px;
+    margin-top: 65px;
     font-size: 15px;
     text-align: center;
   }
@@ -552,8 +572,8 @@ footer .email-input input:focus-visible,
   }
 
   .footer-menu .footer-link {
-    margin-bottom: 25px;
-    font-size: 15px;
+    margin-bottom: 34px;
+    font-size: 16px;
   }
 
   .privacy-icon {
@@ -566,17 +586,14 @@ footer .email-input input:focus-visible,
     width: 22px;
   }
 
+  /* below 1340px the link columns are taller: the text stays in the flow */
   .legal-text {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-left: 0px;
-    position: absolute;
-    transform: translateX(-50%);
-    width: 1000px;
-    font-size: 14px;
-    line-height: 1.6;
-    padding-right: 0px;
-    padding-left: 0px;
+    margin: 40px auto 0;
+    width: auto;
+    max-width: 1024px;
+    font-size: 15px;
+    line-height: 26px;
+    padding: 0 0 60px;
   }
 
   .footer-corner.top-left img {
@@ -592,13 +609,30 @@ footer .email-input input:focus-visible,
    width of their content, the free space goes between them */
 @media (min-width: 1340px) {
   .footer-links {
-    grid-template-columns: repeat(3, auto);
-    justify-content: space-between;
-    column-gap: 35px;
+    grid-template-columns: 160px 117px 1fr;
+    justify-content: start;
+    column-gap: 0;
   }
 
   .footer-column.last-column {
-    grid-template-columns: auto auto;
-    column-gap: 30px;
+    grid-template-columns: 201px 166px;
+    column-gap: 36px;
+  }
+
+  /* the design: the text sits 77px above the bottom edge */
+  .legal-text {
+    position: absolute;
+    bottom: 77px;
+    width: 1024px;
+    margin: 0;
+    padding: 0;
+    transform: translateX(-50%);
+  }
+
+  /* 48px lines as in the design (links on one line only from here) */
+  .footer-link,
+  .footer-menu .footer-link {
+    margin-bottom: 10px;
+    line-height: 48px;
   }
 }

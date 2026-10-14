@@ -30,7 +30,7 @@ header {
 .header-cart {
   position: absolute;
   top: 50%;
-  right: 16px;
+  right: 20px;
   transform: translateY(-50%);
   display: flex;
   align-items: center;
@@ -52,22 +52,23 @@ header {
 
 .header-cart svg {
   display: block;
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
 }
 
 header img {
   width: 124px;
-  height: auto;
+  height: 26px;
   object-fit: contain;
 }
 
 .promo-bar {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {
   .promo-bar {
+    font-weight: 700;
     height: 32px;
     padding: 0 20px;
     font-size: 11px;
@@ -108,15 +109,16 @@ header img {
   }
 
   .header-cart {
-    right: 24px;
+    right: 64px;
   }
 
   .header-cart svg {
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 25px;
   }
 
   header img {
-    width: auto;
+    width: 142px;
+    height: 30px;
   }
 }

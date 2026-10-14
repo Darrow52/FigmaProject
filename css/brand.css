@@ -14,7 +14,7 @@
   display: block;
   width: 100%;
   height: 78px;
-  padding: 19px 0;
+  padding: 20px 0;
   background-color: #dbe9ff;
   overflow: hidden;
   touch-action: pan-y;
@@ -25,21 +25,24 @@
   display: flex;
   align-items: center;
   width: max-content;
-  height: 40px;
+  height: 38px;
   animation: 25s linear 0s infinite normal none running brand-scroll;
 }
 
+/* padding-right = gap, so the seam between the two groups has the same gap */
 .brand-group {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  height: 40px;
+  gap: 24px;
+  height: 38px;
+  padding-right: 24px;
 }
 
 .brand-group img {
   display: block;
-  width: auto;
-  height: 40px;
+  width: 136px;
+  height: auto;
   max-width: none;
   flex-shrink: 0;
 }
@@ -64,20 +67,9 @@
 }
 
 @media (min-width: 768px) {
-  .brand-visual {
-    padding: 22px 0;
-  }
-
-  .brand-track {
-    height: 34px;
-  }
-
   .brand-group {
-    height: 34px;
-  }
-
-  .brand-group img {
-    height: 34px;
+    gap: 40px;
+    padding-right: 40px;
   }
 }
 

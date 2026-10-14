@@ -9,7 +9,7 @@
   align-items: center;
   max-width: none;
   margin: 0 auto;
-  padding: 40px 16px 25px;
+  padding: 32px 16px 21px;
   flex-direction: column;
   width: 100%;
   gap: 0;
@@ -28,21 +28,21 @@
   flex: 1 1 0%;
   margin: 0;
   width: 100%;
-  margin-top: 22px;
+  margin-top: 24px;
 }
 
 .woman-image > img {
   width: 100%;
   border-radius: 10px;
-  height: 410px;
+  height: 409px;
   object-fit: cover;
 }
 
 .text1 {
   display: block;
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 20px;
-  line-height: 1.1;
+  line-height: 24px;
   color: #5e2ca5;
   width: 100%;
   text-align: center;
@@ -51,20 +51,21 @@
 .text2 {
   display: block;
   margin: 0;
-  font-size: 34px;
-  line-height: 1.03;
+  font-size: 28px;
+  line-height: 36px;
   color: #30204a;
   width: 100%;
-  margin-top: 2px;
+  margin-top: 4px;
   text-align: center;
 }
 
 .product-text p {
-  max-width: 340px;
-  margin: 15px auto;
-  font-size: 13px;
-  line-height: 1.4;
+  max-width: none;
+  margin: 8px auto 16px;
+  font-size: 14px;
+  line-height: 19px;
   color: #30204a;
+  letter-spacing: 0.2px;
   width: 100%;
   text-align: center;
 }
@@ -74,12 +75,12 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 285px;
-  height: 44px;
+  max-width: none;
+  height: 56px;
   border-radius: 30px;
   background-color: #5e2ca5;
   color: white;
-  font-size: 11px;
+  font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
@@ -87,26 +88,26 @@
 
 .woman-comment {
   position: absolute;
-  left: 7%;
-  bottom: 5%;
+  left: 16px;
+  bottom: 29px;
   top: auto;
-  width: 86%;
+  width: calc(100% - 32px);
   z-index: 10;
   display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 11px 13px; /* 14px 16px in Figma, minus the 3px border */
   background-color: white;
   border: 2px solid #d9c8ff;
-  border-width: 1px;
-  border-radius: 10px;
+  border-width: 3px;
+  border-radius: 16px;
 }
 
 .woman-comment > img {
   position: relative;
   z-index: 1;
-  width: 38px;
-  height: 38px;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
   object-fit: cover;
   border-radius: 50%;
@@ -116,25 +117,29 @@
   display: block;
   flex: 1 1 0%;
   margin: 0;
-  font-size: 9px;
-  line-height: 1.25;
+  font-size: 12px;
+  line-height: 16px;
   color: #30204a;
+  letter-spacing: 0.2px;
 }
 
 .woman-name {
   display: block;
-  margin: 0;
-  font-size: 9px;
+  margin: 12px 0 0;
+  font-size: 12px;
   font-style: normal;
   font-weight: 700;
   color: #30204a;
+  font-family: "Magallanes", sans-serif;
+  line-height: 16px;
+  letter-spacing: -0.4px;
 }
 
 .happy-customer {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 7px;
+  gap: 8px;
 
   flex-wrap: nowrap;
   justify-content: center;
@@ -145,41 +150,42 @@
 .review-avatars {
   display: flex;
   align-items: center;
-  height: 32px;
+  height: 23px;
 }
 
 .review-avatars img {
   display: block;
-  width: 32px;
-  height: 32px;
+  width: 23px;
+  height: 23px;
   max-width: none;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 1px solid white;
 }
 
 .customer-text {
   display: block;
   white-space: nowrap;
-  font-size: 11px;
-  line-height: 1.2;
+  font-size: 12px;
+  line-height: 19px;
+  font-weight: 500;
   color: #000000;
 }
 
 .review-rating {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .first-frame .review-stars {
   display: flex;
   align-items: center;
-  gap: 1px;
+  gap: 3px;
   margin: 0;
   position: relative;
-  top: -4px;
-  margin-top: 14px;
+  top: 0;
+  margin-top: 0;
   font-size: 13px;
   line-height: 1;
   color: #ffb000;
@@ -187,9 +193,10 @@
 
 .review-numbers {
   display: block;
-  font-size: 11px;
-  line-height: 1.2;
+  font-size: 12px;
+  line-height: 19px;
   color: #000000;
+  font-weight: 500;
   white-space: nowrap;
 }
 
@@ -199,6 +206,7 @@
   background-color: #eef3ff;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .decor-cloud img,
@@ -237,10 +245,10 @@
 }
 
 .stars-top-right {
-  top: 55px;
-  right: 35px;
+  top: 335px;
+  right: 32px;
 
-  width: 100px;
+  width: 52px;
 }
 
 .stars-middle-left {
@@ -250,8 +258,15 @@
   width: 100px;
 }
 
+/* phones: one big cloud at the bottom (the others are hidden further down) */
+.cloud-mobile {
+  right: -185px;
+  bottom: 0;
+  width: 402px;
+}
+
 .review-avatars img + img {
-  margin-left: -7px;
+  margin-left: -5px;
 }
 
 .review-stars img {
@@ -268,13 +283,15 @@
 }
 
 .text1 {
-  font-family: "Magallanes", sans-serif;
-  font-weight: 700;
+  font-family: "Avenir", sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.6px;
 }
 
 .pod-button {
   font-family: "Avenir", sans-serif;
-  font-weight: 700;
+  font-weight: 900;
+  letter-spacing: 0.02em;
 }
 
 .text2 {
@@ -332,6 +349,16 @@
   pointer-events: none;
 }
 
+/* phones: only the small stars (on the photo) and the big bottom cloud;
+   after .decor-cloud / .decor-stars so that display: none wins */
+.cloud-top-left,
+.cloud-top-center,
+.cloud-bottom-left,
+.cloud-bottom-right,
+.stars-middle-left {
+  display: none;
+}
+
 .hero-container {
   position: relative;
 }
@@ -339,7 +366,7 @@
 .woman-image {
   position: relative;
 
-  z-index: 3;
+  z-index: auto;
 }
 
 .product-text {
@@ -353,14 +380,22 @@
   pointer-events: none;
 }
 
+/* decor sits above the photo and the text, the review card above the decor */
 .hero-decor {
-  z-index: 0;
+  z-index: 3;
 }
 
 .hero-container {
-  z-index: 2;
+  z-index: auto;
 }
 
+
+/* the row of reviews is a bit wider than a 375px phone: shrink it there */
+@media (min-width: 390px) {
+  .happy-customer {
+    transform: none;
+  }
+}
 @media (min-width: 768px) {
   .hero-container {
     max-width: 1000px;
@@ -396,6 +431,9 @@
     font-size: 23px;
     width: auto;
     text-align: initial;
+    font-family: "Magallanes", sans-serif;
+    font-weight: 800;
+    letter-spacing: 0;
   }
 
   .text2 {
@@ -438,7 +476,7 @@
 
   .woman-name {
     font-size: 11px;
-    margin-top: 3px;
+    margin-top: 12px;
   }
 
   .happy-customer {
@@ -469,8 +507,8 @@
   }
 
   .first-frame .review-stars {
-    top: -8px;
-    margin-top: 17px;
+    top: 0;
+    margin-top: 0;
     font-size: 15px;
   }
 
@@ -527,6 +565,18 @@
     left: 45%;
     width: 70px;
   }
+
+  .cloud-top-left,
+  .cloud-top-center,
+  .cloud-bottom-left,
+  .cloud-bottom-right,
+  .stars-middle-left {
+    display: block;
+  }
+
+  .cloud-mobile {
+    display: none;
+  }
 }
 
 @media (min-width: 1101px) {
@@ -536,7 +586,7 @@
 
   .woman-image {
     flex-grow: 0;
-    flex-basis: 52%;
+    flex-basis: 52.2%;
   }
 
   .woman-image > img {
@@ -546,7 +596,7 @@
   }
 
   .woman-name {
-    margin-top: 0px;
+    margin-top: 12px;
   }
 
   .review-numbers {
@@ -555,11 +605,12 @@
   }
 
   .hero-container {
-    max-width: 1400px;
-    padding: 30px 24px 30px 40px;
+    max-width: 1440px;
+    padding: 28px 23px 25px 65px;
     flex-direction: row;
     width: auto;
-    gap: 40px;
+    /* 144px on the 1440 design, shrinking to 40px at 1101 so the text column keeps ~440px */
+    gap: clamp(40px, 30.68vw - 298px, 144px);
   }
 
   .product-text {
@@ -568,6 +619,8 @@
     flex-direction: row;
     width: auto;
     text-align: initial;
+    max-width: 502px;
+    padding-top: 29px;
   }
 
   .woman-image {
@@ -580,58 +633,64 @@
   }
 
   .text1 {
-    margin-top: 30px;
-    font-size: 28px;
+    margin-top: 17px;
+    font-size: 33px;
     width: auto;
     text-align: initial;
+    line-height: 62px;
   }
 
   .text2 {
-    font-size: 3.4rem;
-    line-height: 1.05;
+    font-size: 52px;
+    line-height: 62px;
     width: auto;
     margin-top: 0;
     text-align: initial;
   }
 
   .product-text p {
-    max-width: 500px;
-    margin: 20px 0;
-    font-size: 16px;
+    max-width: 484px;
+    margin: 16px 0 32px;
+    font-size: 18px;
     width: auto;
     text-align: initial;
+    line-height: 24px;
   }
 
   .pod-button {
-    max-width: 320px;
-    height: 50px;
-    font-size: 13px;
+    max-width: 402px;
+    height: 56px;
+    font-size: 14px;
   }
 
   .woman-comment {
-    gap: 15px;
-    padding: 12px 18px;
-    border-width: 2px;
-    border-radius: 15px;
+    gap: 24px;
+    padding: 11px 13px;
+    border-width: 3px;
+    border-radius: 16px;
+    left: 19.8%; /* 140px of the 706px photo */
+    bottom: 38px;
+    width: 73.9%; /* 522px */
   }
 
   .woman-comment > img {
-    width: 55px;
-    height: 55px;
+    width: 75px;
+    height: 75px;
   }
 
   .comment-text {
-    font-size: 14px;
-    line-height: 1.3;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .woman-name {
-    font-size: 13px;
+    font-size: 14px;
+    line-height: 18px;
   }
 
   .happy-customer {
     width: fit-content;
-    gap: 20px;
+    gap: 12px;
     flex-wrap: nowrap;
     justify-content: normal;
     transform: none;
@@ -639,74 +698,76 @@
   }
 
   .review-avatars {
-    height: 42px;
+    height: 32px;
   }
 
   .review-avatars img {
-    width: 42px;
-    height: 42px;
+    width: 32px;
+    height: 32px;
   }
 
   .customer-text {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .review-rating {
-    gap: 15px;
+    gap: 8px;
   }
 
   .first-frame .review-stars {
-    gap: 2px;
-    top: -13px;
-    margin-top: 25px;
+    gap: 3px;
+    top: 0;
+    margin-top: 0;
     font-size: 18px;
   }
 
   .review-numbers {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .review-avatars img + img {
-    margin-left: -9px;
+    margin-left: -7px;
   }
 
   .review-stars img {
-    width: 19px;
-    height: 19px;
+    width: 14px;
+    height: 13px;
   }
 
   .cloud-top-left {
-    top: 15px;
-    left: 0px;
-    width: 170px;
+    top: -6px;
+    left: -114px;
+    width: 202px;
   }
 
   .cloud-top-center {
-    top: 40px;
-    left: 42%;
-    width: 190px;
+    top: 32px;
+    left: calc(50% - 303px);
+    width: 194px;
   }
 
   .cloud-bottom-left {
-    bottom: 0px;
-    left: 0px;
-    width: 230px;
+    bottom: -4px;
+    left: -25px;
+    width: 197px;
   }
 
   .cloud-bottom-right {
-    right: 0px;
-    bottom: 0px;
-    width: 260px;
+    right: -477px;
+    bottom: -16px;
+    width: 746px;
   }
 
   .stars-top-right {
-    top: 55px;
-    right: 35px;
-    width: 100px;
+    top: 53px;
+    right: auto;
+    width: 78px;
+    left: calc(50% + 575px);
   }
 
   .stars-middle-left {
-    top: 55%;
-    width: 100px;
+    top: 397px;
+    width: 102px;
+    left: calc(50% - 72px);
   }
 }

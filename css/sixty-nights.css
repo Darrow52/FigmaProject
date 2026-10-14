@@ -2,17 +2,18 @@
 
 .single-night {
   display: inline-flex;
-  padding: 5px 11px;
-  border-radius: 20px;
+  padding: 4px 9px;
+  border-radius: 25px;
   background-color: rgb(238, 232, 255);
   color: rgb(79, 44, 160);
-  font-size: 11px;
+  font-size: 12px;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
   order: 1;
   align-self: flex-start;
   width: fit-content;
   margin: 0 0 12px;
-  line-height: 1;
+  line-height: 16px;
 }
 
 .third-frame {
@@ -21,7 +22,7 @@
   gap: 0;
   max-width: none;
   margin: 0;
-  padding: 32px 19px 40px;
+  padding: 56px 16px;
   background-color: rgb(247, 245, 255);
   box-shadow: rgb(247, 245, 255) 0px 0px 0px 100vmax;
   clip-path: inset(0px -100vmax);
@@ -41,11 +42,11 @@
 
 .bedtime-title {
   display: block;
-  margin: 0 0 34px;
+  margin: 0 0 24px;
   max-width: 100%;
-  font-size: 34px;
-  line-height: 1.08;
-  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 800;
   color: rgb(48, 32, 74);
   font-family: Magallanes, sans-serif;
   order: 2;
@@ -57,20 +58,21 @@
   color: rgb(94, 44, 165);
 }
 
+/* "That's when I started wondering" card */
 .whole-problem {
   grid-row: 2;
   grid-column: 1;
   display: grid;
-  grid-template-columns: 62px 1fr;
+  grid-template-columns: 49px 1fr;
   grid-template-rows: auto auto;
-  align-items: center;
-  column-gap: 18px;
-  padding: 18px;
+  align-items: start;
+  column-gap: 12px;
+  padding: 11px 22px 13px 16px;
   background-color: rgb(238, 232, 255);
-  border-radius: 12px;
+  border-radius: 10px;
   order: 6;
   width: 100%;
-  margin: 0 0 30px;
+  margin: 0 0 24px;
   position: relative;
   transform: none;
 }
@@ -81,15 +83,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 62px;
-  height: 62px;
+  width: 49px;
+  height: 36px;
   margin: 0;
   padding: 0;
 }
 
 .heart-image img {
-  width: 62px;
-  height: 62px;
+  width: 46px;
+  height: 34px;
   object-fit: contain;
   display: block;
 }
@@ -98,10 +100,10 @@
   grid-row: 1;
   grid-column: 2;
   display: block;
-  margin: 0 0 7px;
+  margin: 0 0 5px;
   font-size: 11px;
-  line-height: 1.2;
-  font-weight: 700;
+  line-height: 13px;
+  letter-spacing: -0.26px;
   color: rgb(48, 32, 74);
   width: 100%;
   padding: 0;
@@ -112,13 +114,15 @@
   grid-column: 2;
   display: block;
   margin: 0;
-  font-size: 17px;
-  line-height: 1.25;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.26px;
   color: rgb(94, 44, 165);
   width: 100%;
   padding: 0;
 }
 
+/* photo collage with the "60 minutes" badge in the middle */
 .kids-image {
   grid-row: 1 / 3;
   grid-column: 2;
@@ -128,11 +132,11 @@
   grid-template-rows: 1fr 1fr;
   width: 100%;
   max-width: none;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 358 / 319;
   overflow: hidden;
   border-radius: 12px;
   order: 3;
-  margin: 0 0 28px;
+  margin: 0 0 24px;
   padding: 0;
   transform: none;
 }
@@ -172,24 +176,26 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 38%;
-  height: 38%;
+  width: 36.6%;
+  height: auto;
   object-fit: contain;
   z-index: 5;
   max-width: none;
 }
 
+/* "27%" card; phones: heading / 27% + text / people / line / two texts.
+   Different gaps between the rows, so row-gap is 0 and the items carry margins */
 .kids-stats {
   grid-row: 3;
   grid-column: 1 / 3;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 15px;
-  padding: 24px;
+  column-gap: 24px;
+  row-gap: 0;
+  padding: 25px 20px 26px;
   background-color: rgb(255, 255, 255);
-  border-radius: 12px;
+  border-radius: 10px;
   order: 7;
   width: 100%;
   margin: 0;
@@ -197,13 +203,23 @@
   transform: none;
 }
 
+/* the divider line between the numbers and the two texts below */
+.kids-stats::after {
+  content: "";
+  grid-row: 4;
+  grid-column: 1 / -1;
+  margin-top: 24px;
+  border-top: 1px solid rgb(221, 216, 234);
+}
+
 .bedtime-struggles {
   grid-row: 1;
-  grid-column: 1 / 3;
+  grid-column: 1 / -1;
   display: block;
   margin: 0;
-  font-size: 21px;
-  line-height: 1.12;
+  max-width: 280px;
+  font-size: 20px;
+  line-height: 24px;
   color: rgb(48, 32, 74);
   width: 100%;
   padding: 0;
@@ -213,74 +229,83 @@
   grid-row: 2;
   grid-column: 1;
   display: block;
-  font-size: 58px;
-  line-height: 1;
-  font-weight: 700;
+  font-family: "Magallanes", sans-serif;
+  font-size: 51px;
+  line-height: 36px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
   color: rgb(94, 44, 165);
   align-self: center;
-  margin: 0;
+  margin: 20px 0 0;
   padding: 0;
 }
 
 .stat-lead {
   grid-row: 2;
   grid-column: 2;
-  margin: 0;
-  font-size: 11px;
-  line-height: 1.35;
+  margin: 20px 0 0;
+  max-width: 170px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
   color: rgb(48, 32, 74);
   align-self: center;
   padding: 0;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .human-pictures {
   grid-row: 3;
-  grid-column: 1 / 3;
+  grid-column: 1 / -1;
   display: block;
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 0;
+  margin: 20px 0 0;
   padding: 0;
+}
+
+.human-pictures picture {
+  display: block;
 }
 
 .human-pictures img {
   display: block;
   width: 100%;
-  max-width: 230px;
+  max-width: 318px;
   height: auto;
-  margin: 0 auto;
+  margin: 0;
   object-fit: contain;
 }
 
 .box-text1 {
-  grid-row: 4;
-  grid-column: 1 / 3;
+  grid-row: 5;
+  grid-column: 1 / -1;
   display: block;
-  margin: 0;
-  padding-top: 15px;
-  border-top: 1px solid rgb(222, 213, 245);
-  font-size: 15px;
-  line-height: 1.3;
-  font-weight: 700;
+  margin: 24px 0 0;
+  padding: 0;
+  font-family: "Magallanes", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
   color: rgb(48, 32, 74);
   width: 100%;
 }
 
 .box-text2 {
-  grid-row: 5;
-  grid-column: 1 / 3;
+  grid-row: 6;
+  grid-column: 1 / -1;
   display: block;
-  margin: 0;
-  padding-top: 10px;
-  border-top: 1px solid rgb(221, 216, 234);
-  font-size: 9px;
-  line-height: 1.3;
+  margin: 8px 0 0;
+  padding: 0;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
   text-align: left;
   color: rgb(48, 32, 74);
   width: 100%;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .kids-text > p {
@@ -288,22 +313,43 @@
   display: block;
   width: 100%;
   max-width: none;
-  margin: 0 0 28px;
+  margin: 0;
   padding: 0;
   color: rgb(48, 32, 74);
-  font-size: 15px;
-  line-height: 1.5;
-  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.2px;
+  font-weight: 500;
 }
 
-.bedtime-struggles,
-.what-if {
+/* "I thought they just weren't tired enough." */
+.kids-text > .tired-enough {
+  margin-bottom: 16px;
+  font-family: "Magallanes", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.kids-text > .kids-lead {
+  margin-bottom: 24px;
+}
+
+
+.bedtime-struggles {
   font-family: "Magallanes", sans-serif;
   font-weight: 700;
 }
 
+.started-wondering,
+.what-if {
+  font-family: "Magallanes", sans-serif;
+  font-weight: 800;
+}
+
 .single-night {
-  font-family: "Avenir", sans-serif;
+  font-family: "Magallanes", sans-serif;
   font-weight: 700;
 }
 
@@ -468,47 +514,78 @@
     font-size: 16px;
     line-height: normal;
   }
-}
 
-@media (min-width: 1101px) {
-  .third-frame {
-    grid-template-columns: 1fr 1fr;
+  /* tablet keeps the old 4-column card: no divider row, the texts carry their own top border */
+  .kids-stats::after {
+    display: none;
   }
 
-  .bedtime-title {
-    line-height: 1.08;
+  .twenty-seven,
+  .stat-lead,
+  .human-pictures {
+    margin-top: 0;
   }
 
-  .what-if {
-    line-height: 1.25;
+  .bedtime-struggles,
+  .stat-lead {
+    max-width: none;
   }
 
   .box-text1 {
-    font-size: 15px;
+    grid-column: 1 / 3;
+    margin-top: 0;
+    padding-top: 15px;
   }
 
-  .single-night {
-    display: inline-block;
-    padding-right: 12px;
-    padding-left: 12px;
-    color: rgb(94, 44, 165);
-    font-size: 12px;
-    order: 0;
-    align-self: auto;
-    width: auto;
-    margin-bottom: 0px;
-    line-height: normal;
+  .box-text2 {
+    margin-top: 0;
+    border-top: 1px solid rgb(221, 216, 234);
   }
 
+  .kids-image {
+    aspect-ratio: 545 / 495;
+  }
+
+  .whole-problem {
+    align-items: center;
+    column-gap: 18px;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .kids-text > .kids-lead {
+    margin-bottom: 0;
+  }
+
+  .kids-text > .tired-enough,
+  .kids-text > .kids-lead {
+    margin-top: 16px;
+  }
+}
+
+@media (min-width: 1101px) {
+  /* text column 548 + 107 + collage 545 = 1200; the rows have no gap,
+     the spacing is in the margins (20px inside the text column, 44px above the card) */
   .third-frame {
     display: grid;
-    gap: 45px 70px;
+    grid-template-columns: minmax(0, 548fr) minmax(0, 545fr);
+    gap: 0 107px;
     max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
     padding: 80px 40px;
     flex-direction: row;
     width: auto;
+  }
+
+  .single-night {
+    display: inline-block;
+    color: rgb(94, 44, 165);
+    font-size: 12px;
+    order: 0;
+    align-self: auto;
+    width: auto;
+    margin-bottom: 0px;
   }
 
   .kids-text {
@@ -519,52 +596,72 @@
   }
 
   .bedtime-title {
-    margin-top: 18px;
+    margin-top: 20px;
     margin-bottom: 0px;
-    max-width: 520px;
-    font-size: 40px;
-    font-weight: 800;
+    max-width: 548px;
+    font-size: 44px;
+    line-height: 56px;
     order: 0;
     width: auto;
   }
 
+  .kids-text > p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .kids-text > .tired-enough,
+  .kids-text > .kids-lead {
+    margin: 20px 0 0;
+  }
+
+
+  /* align-self: the collage beside it must not stretch the card */
   .whole-problem {
-    grid-template-columns: 110px 1fr;
-    column-gap: 30px;
-    padding: 20px 30px;
-    border-radius: 15px;
+    align-self: start;
+    grid-template-columns: 83px 1fr;
+    column-gap: 37px;
+    align-items: start;
+    padding: 15px 20px 16px 32px;
+    border-radius: 16px;
     order: 0;
     width: auto;
-    margin-bottom: 0px;
+    margin: 20px 0 0;
     position: static;
   }
 
   .heart-image {
-    width: auto;
-    height: auto;
+    width: 83px;
+    height: 61px;
+    margin-top: 7px;
   }
 
   .heart-image img {
-    width: 90px;
-    height: 90px;
+    width: 83px;
+    height: 61px;
   }
 
   .started-wondering {
-    margin-bottom: 0px;
+    margin-bottom: 8px;
     font-size: 16px;
-    line-height: 1.3;
+    line-height: 20px;
+    letter-spacing: -0.4px;
     width: auto;
   }
 
   .what-if {
-    margin-top: 8px;
-    font-size: 25px;
+    margin-top: 0;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
     width: auto;
   }
 
   .kids-image {
-    max-width: 550px;
-    border-radius: 15px;
+    align-self: start;
+    max-width: 545px;
+    aspect-ratio: 545 / 495;
+    border-radius: 16px;
     order: 0;
     margin-bottom: 0px;
   }
@@ -575,71 +672,85 @@
   }
 
   .kids-image img:nth-child(5) {
-    width: 205px;
-    height: 205px;
+    width: 203px;
   }
 
+  /* card: heading | (space) | 27% + text | (space) | people, then the line, then two texts */
   .kids-stats {
-    grid-template-columns: 1.4fr 0.7fr 1.4fr 1.6fr;
-    grid-template-rows: auto auto;
-    gap: 20px 25px;
-    padding: 30px;
+    grid-template-columns: 280px 1fr auto 227px 1fr 267px;
+    grid-template-rows: auto auto auto;
+    column-gap: 0;
+    row-gap: 20px;
+    margin-top: 44px;
+    padding: 32px 38px;
     background-color: white;
-    border-radius: 15px;
+    border-radius: 16px;
     order: 0;
     width: auto;
     position: static;
   }
 
+  .kids-stats::after {
+    display: block;
+    grid-row: 2;
+    margin-top: 0;
+  }
+
   .bedtime-struggles {
     grid-column: 1;
-    font-size: 25px;
-    line-height: 1.1;
-    width: auto;
+    max-width: 280px;
+    font-size: 24px;
+    line-height: 28px;
   }
 
   .twenty-seven {
     grid-row: 1;
-    grid-column: 2;
-    font-size: 80px;
-    align-self: auto;
+    grid-column: 3;
+    margin: 0 24px 0 0;
+    font-size: 84px;
+    line-height: 60px;
   }
 
   .stat-lead {
     grid-row: 1;
-    grid-column: 3;
+    grid-column: 4;
+    margin: 0;
+    max-width: 227px;
     font-size: 16px;
-    line-height: 1.3;
-    align-self: auto;
+    line-height: 20px;
   }
 
   .human-pictures {
     grid-row: 1;
-    grid-column: 4;
+    grid-column: 6;
     display: flex;
     width: auto;
+    margin: 0;
   }
 
   .human-pictures img {
-    max-width: 250px;
-    margin-right: 0px;
-    margin-left: 0px;
+    max-width: 267px;
     object-fit: fill;
   }
 
   .box-text1 {
-    grid-row: 2;
-    padding-top: 20px;
-    border-top: 1px solid rgb(221, 216, 234);
-    width: auto;
+    grid-row: 3;
+    grid-column: 1 / 4;
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .box-text2 {
-    grid-row: 2;
-    grid-column: 3 / 5;
-    padding-top: 20px;
-    font-size: 14px;
+    grid-row: 3;
+    grid-column: 4 / -1;
+    margin: 0;
+    padding: 0;
+    border-top: 0;
+    font-size: 16px;
+    line-height: 20px;
     text-align: right;
-    width: auto;
   }
 }

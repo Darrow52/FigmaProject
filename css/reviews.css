@@ -3,7 +3,7 @@
 .eighth-frame {
   display: block;
   width: 100%;
-  padding: 40px 16px;
+  padding: 56px 0;
   background-color: rgb(255, 255, 255);
 }
 
@@ -19,18 +19,18 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 10px;
+  padding: 4px 12px;
   background-color: rgb(238, 232, 255);
   border-radius: 20px;
   color: rgb(53, 38, 165);
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
 }
 
 .reviews-title {
-  margin: 13px 0 0;
-  font-size: 29px;
-  line-height: 1.05;
+  margin: 8px 0 0;
+  font-size: 28px;
+  line-height: 36px;
   color: rgb(48, 32, 74);
   width: 100%;
   max-width: 350px;
@@ -41,12 +41,13 @@
 }
 
 .reviews-description {
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   max-width: 340px;
-  font-size: 12px;
-  line-height: 1.35;
+  font-size: 14px;
+  line-height: 19px;
   color: rgb(48, 32, 74);
   width: 100%;
+  font-weight: 500;
 }
 
 .reviews-carousel {
@@ -55,7 +56,7 @@
   gap: 12px;
   align-items: stretch;
   max-width: none;
-  margin: 22px auto 0;
+  margin: 32px auto 0;
   width: 100%;
   overflow: auto hidden;
   scroll-snap-type: x mandatory;
@@ -134,7 +135,7 @@
 }
 
 .verified {
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1;
   color: rgb(94, 44, 165);
 }
@@ -153,22 +154,22 @@
 }
 
 .review-author {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.2;
   color: rgb(48, 32, 74);
 }
 
 .review-title {
   margin: 8px 0 0;
-  font-size: 14px;
-  line-height: 1.1;
+  font-size: 24px;
+  line-height: 28px;
   color: rgb(48, 32, 74);
 }
 
 .review-text > p {
   margin: 8px 0 0;
-  font-size: 10px;
-  line-height: 1.3;
+  font-size: 14px;
+  line-height: 20px;
   color: rgb(48, 32, 74);
 }
 
@@ -178,12 +179,15 @@
 
 .carousel-arrow {
   align-self: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  border-radius: 50%;
+  background-color: #eee8ff;
+  padding: 8px;
 }
 
 .reviews-dot {
@@ -211,7 +215,13 @@
 }
 
 .review-author {
+  font-family: "Magallanes", sans-serif;
   font-weight: 700;
+}
+
+/* Avenir 95 Black in the design */
+.reviews-description strong {
+  font-weight: 900;
 }
 
 .reviews-title {
@@ -225,8 +235,9 @@
 }
 
 .trusted-badge {
-  font-family: "Avenir", sans-serif;
+  font-family: "Magallanes", sans-serif;
   font-weight: 700;
+  letter-spacing: 0.6px;
 }
 
 .reviews-title {
@@ -334,8 +345,8 @@
   }
 
   .carousel-arrow {
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
     display: flex;
   }
 
@@ -359,17 +370,28 @@
 }
 
 @media (min-width: 1101px) {
+  /* arrows are 32px from the cards (cards are 24px apart): the arrow
+     columns are 8px wider than the arrows; the whole row is centered */
   .reviews-carousel {
-    grid-template-columns: 40px minmax(0px, 1fr) minmax(0px, 1fr) 40px;
+    grid-template-columns: 44px minmax(0, 536px) minmax(0, 536px) 44px;
+    justify-content: center;
+  }
+
+  .left-arrow {
+    justify-self: start;
+  }
+
+  .right-arrow {
+    justify-self: end;
   }
 
   .carousel-arrow {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
 
   .eighth-frame {
-    padding: 70px 0;
+    padding: 80px 64px;
   }
 
   .reviews-header {
@@ -377,31 +399,31 @@
   }
 
   .trusted-badge {
-    padding: 5px 14px;
-    font-size: 13px;
+    padding: 4px 12px;
+    font-size: 12px;
   }
 
   .reviews-title {
-    margin-top: 18px;
-    font-size: 40px;
-    line-height: 1.15;
+    margin-top: 12px;
+    font-size: 44px;
+    line-height: 56px;
     width: auto;
     max-width: none;
   }
 
   .reviews-description {
-    margin-top: 15px;
+    margin-top: 12px;
     max-width: 650px;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 20px;
     width: auto;
   }
 
   .reviews-carousel {
     display: grid;
-    gap: 20px;
-    max-width: 1030px;
-    margin-top: 30px;
+    gap: 24px;
+    max-width: 1312px;
+    margin-top: 32px;
     width: auto;
     overflow: visible;
   }
@@ -415,17 +437,19 @@
   }
 
   .review-card {
-    border-radius: 12px;
+    border-radius: 0;
     width: auto;
+    column-gap: 16px;
   }
 
   .review-text {
-    padding: 20px;
+    padding: 24px 20px 24px 16px;
+    border-radius: 12px;
   }
 
   .verified-row {
     gap: 5px;
-    margin-top: 0px;
+    margin-top: 8px;
   }
 
   .verified-icon img {
@@ -435,30 +459,41 @@
 
   .verified {
     font-size: 12px;
+    line-height: 15px;
   }
 
   .review-logo {
     padding-top: 15px;
+    padding-bottom: 10px;
   }
 
   .review-logo img {
-    width: 125px;
+    width: 136px;
   }
 
   .review-author {
     font-size: 16px;
+    line-height: 16px;
+  }
+
+  /* the shared stars (global.css) are shifted up; here they sit 32px
+     under the "Verified Buyer" row as in the design */
+  .review-text .review-stars {
+    margin-top: 32px;
+    top: 0;
+    line-height: 16px;
   }
 
   .review-title {
-    margin-top: 12px;
-    font-size: 19px;
-    line-height: 1.2;
+    margin-top: 16px;
+    font-size: 20px;
+    line-height: 24px;
   }
 
   .review-text > p {
-    margin-top: 14px;
+    margin-top: 16px;
     font-size: 14px;
-    line-height: 1.4;
+    line-height: 19px;
   }
 
   .eighth-frame .reviews-carousel::-webkit-scrollbar {

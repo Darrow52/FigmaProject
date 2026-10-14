@@ -3,13 +3,13 @@
 .faq-frame {
   display: flex;
   grid-template-columns: 330px 580px;
-  gap: 25px;
+  gap: 16px;
   width: 100%;
   margin: 0;
   align-items: start;
   flex-direction: column;
   max-width: none;
-  padding: 40px 16px;
+  padding: 56px 16px;
 }
 
 .faq {
@@ -25,25 +25,25 @@
 
 .frequently-asked {
   display: block;
-  font-size: 29px;
-  line-height: 1.05;
+  font-size: 28px;
+  line-height: 36px;
   color: rgb(48, 32, 74);
 }
 
 .questions {
   display: block;
-  font-size: 29px;
-  line-height: 1.05;
+  font-size: 28px;
+  line-height: 36px;
   color: rgb(94, 44, 165);
 }
 
 .faq > p {
-  margin-top: 13px;
+  margin-top: 8px;
   margin-bottom: 0px;
-  font-size: 12px;
-  line-height: 1.35;
+  font-size: 14px;
+  line-height: 19px;
   color: rgb(48, 32, 74);
-  max-width: 330px;
+  max-width: 317px;
 }
 
 .faq-text {
@@ -56,7 +56,8 @@
   position: relative;
   display: block;
   width: 100%;
-  padding: 15px 35px 15px 0;
+  /* 72px with the border (design) */
+  padding: 26px 35px 25px 0;
   border-bottom: 1px solid rgb(222, 213, 245);
 }
 
@@ -72,11 +73,18 @@
   border: 0px;
   background: none;
   text-align: left;
-  font-family: inherit;
-  font-size: 13px;
-  line-height: 1.25;
+  font-family: "Magallanes", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 20px;
   color: rgb(48, 32, 74);
   cursor: pointer;
+  font-synthesis: none;
+}
+
+/* open question: the question turns purple, the "-" stays dark (design) */
+.question.open .ask {
+  color: rgb(94, 44, 165);
 }
 
 .ask:focus-visible {
@@ -86,7 +94,8 @@
 
 .faq-toggle {
   position: absolute;
-  top: 11px;
+  /* the +/- is centred on the first line of the question (design) */
+  top: 22px;
   right: 0px;
   display: flex;
   align-items: center;
@@ -102,10 +111,10 @@
 
 .answer {
   display: none;
-  max-width: 100%;
-  margin-top: 9px;
-  font-size: 11px;
-  line-height: 1.4;
+  max-width: 317px;
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 19px;
   color: rgb(48, 32, 74);
 }
 
@@ -117,8 +126,9 @@
   font-size: 20px;
 }
 
-.faq-toggle,
-.ask {
+.faq-toggle {
+  /* the +/- glyph keeps the body font (the question itself is Magallanes) */
+  font-family: "Avenir", sans-serif;
   font-weight: 700;
 }
 
@@ -193,60 +203,52 @@
 }
 
 @media (min-width: 1101px) {
+  /* 383px + 148px + 669px on 1440; on narrower screens the gap shrinks
+     first, then the list column */
   .faq-frame {
-    grid-template-columns: 330px 580px;
+    grid-template-columns: minmax(0, 383px) minmax(0, 669px);
+    justify-content: center;
+    column-gap: clamp(32px, 100vw - 1292px, 148px);
+    width: auto;
     max-width: none;
+    margin: 0;
+    padding: 80px 32px;
   }
 
-  .faq-frame {
-    display: grid;
-    gap: normal 130px;
-    width: 1040px;
-    margin-top: 70px;
-    margin-right: auto;
-    margin-left: auto;
-    flex-direction: row;
-    padding: 0;
-  }
-
-  .faq {
-    width: 330px;
-  }
-
+  /* "Frequently" / "Asked Questions" (design) */
   .frequently-asked {
-    font-size: 40px;
-    line-height: 1.2;
+    display: inline;
+    font-size: 44px;
+    line-height: 56px;
   }
 
   .questions {
-    font-size: 40px;
-    line-height: 1.2;
+    display: inline;
+    font-size: 44px;
+    line-height: 56px;
   }
 
   .faq > p {
     margin-top: 20px;
-    font-size: 15px;
-    line-height: 1.45;
-    max-width: none;
-  }
-
-  .faq-text {
-    width: 580px;
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 398px;
   }
 
   .question {
-    padding-top: 18px;
+    padding-top: 24px;
     padding-right: 45px;
-    padding-bottom: 18px;
+    padding-bottom: 23px;
   }
 
   .ask {
-    font-size: 18px;
-    line-height: 1.3;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
   }
 
   .faq-toggle {
-    top: 14px;
+    top: 20px;
     right: 5px;
     width: 25px;
     height: 25px;
@@ -254,10 +256,10 @@
   }
 
   .answer {
-    max-width: 520px;
-    margin-top: 12px;
-    font-size: 15px;
-    line-height: 1.45;
+    max-width: 583px;
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .question.open .faq-toggle {

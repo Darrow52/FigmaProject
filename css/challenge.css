@@ -3,14 +3,13 @@
 .challenge-banner {
   position: relative;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 444px;
   background-color: rgb(247, 246, 255);
   overflow: hidden;
-  padding: 35px 8px 0;
-  height: 444px;
+  padding: 56px 0 0;
 }
 
 .challenge-content {
@@ -22,63 +21,65 @@
   width: 100%;
   text-align: center;
   max-width: 100%;
+  padding: 0 8px;
 }
 
 .challenge-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 10px;
+  padding: 4px 12px;
   background-color: rgb(238, 232, 255);
   border-radius: 20px;
   color: rgb(79, 44, 160);
-  font-size: 8px;
+  font-size: 12px;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 16px;
 }
 
 .challenge-title {
   margin: 12px 0 0;
   color: rgb(89, 49, 155);
-  font-size: 23px;
-  line-height: 1.08;
-  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 800;
   font-family: Magallanes, sans-serif;
   display: block;
   width: 100%;
-  max-width: 250px;
+  max-width: 336px;
   text-align: center;
 }
 
 .challenge-description {
-  margin: 10px 0 0;
-  max-width: 285px;
+  margin: 12px 0 0;
+  max-width: 290px;
   color: rgb(48, 32, 74);
-  font-size: 9px;
-  line-height: 1.3;
+  font-size: 12px;
+  line-height: 16px;
   display: block;
   width: 100%;
   text-align: center;
+  font-weight: 500;
 }
 
 .challenge-benefits {
   display: grid;
   align-items: start;
-  gap: 0 8px;
-  margin: 18px 0 0;
+  gap: 0 4px;
+  margin: 26px 0 0;
   padding: 0;
   list-style: none;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   position: relative;
   z-index: 3;
-  max-width: 270px;
+  max-width: 374px;
 }
 
 .challenge-benefit {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 12px;
   text-align: center;
   min-width: 0px;
   flex-direction: column;
@@ -89,16 +90,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   flex-shrink: 0;
   background-color: rgb(238, 232, 255);
   border-radius: 50%;
 }
 
 .challenge-benefit .benefit-icon img {
-  width: 17px;
-  height: 17px;
+  width: 28px;
+  height: 28px;
   object-fit: contain;
   display: block;
 }
@@ -112,8 +113,8 @@
 
 .benefit-info strong {
   color: rgb(89, 49, 155);
-  font-size: 10px;
-  line-height: 1.15;
+  font-size: 14px;
+  line-height: 20px;
   display: block;
   white-space: nowrap;
 }
@@ -121,38 +122,32 @@
 .benefit-info span {
   margin-top: 4px;
   color: rgb(48, 32, 74);
-  font-size: 8px;
-  line-height: 1.15;
+  font-size: 12px;
+  line-height: 16px;
   display: block;
   white-space: nowrap;
+  font-weight: 500;
 }
 
+/* phones: the whole picture as a block under the text (design) */
 .challenge-kids {
-  position: absolute;
-  right: auto;
-  bottom: 0px;
-  height: 190px;
-  opacity: 0.95;
-  left: 50%;
+  position: relative;
   z-index: 1;
-  width: auto;
-  margin: 0;
-  transform: translateX(-50%);
+  width: 100%;
+  margin: 24px 0 0;
+  opacity: 0.95;
 }
 
 .challenge-kids img {
   display: block;
-  height: 100%;
-  width: auto;
-  object-fit: contain;
-  max-width: none;
-  object-position: center bottom;
+  width: 100%;
+  height: auto;
 }
 
 .challenge-benefit:nth-child(3) {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 12px;
   text-align: center;
   min-width: 0px;
   flex-direction: column;
@@ -162,12 +157,15 @@
 }
 
 .benefit-info strong {
-  font-weight: 700;
+  font-family: "Magallanes", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.4px;
 }
 
 .challenge-badge {
-  font-family: "Avenir", sans-serif;
+  font-family: "Magallanes", sans-serif;
   font-weight: 700;
+  letter-spacing: 0.6px;
 }
 
 .challenge-title {
@@ -181,8 +179,10 @@
     --kids-height: clamp(170px, 22vw, 225px);
     --kids-right: 18px;
 
+    flex-direction: row;
     align-items: center;
     min-height: 270px;
+    padding-top: 35px;
     padding-right: calc(
       var(--kids-right) + var(--kids-height) * 470 / 283 + 20px
     );
@@ -194,12 +194,13 @@
   .challenge-content {
     width: 650px;
     max-width: 100%;
+    padding: 0;
   }
 
   .challenge-badge {
-    padding: 5px 12px;
+    padding: 4px 12px;
     font-size: 11px;
-    line-height: inherit;
+    line-height: 16px;
   }
 
   .challenge-title {
@@ -265,15 +266,26 @@
   }
 
   .challenge-kids {
+    position: absolute;
     right: var(--kids-right);
+    bottom: 0;
     height: var(--kids-height);
-    left: auto;
     z-index: auto;
-    transform: none;
+    width: auto;
+    margin: 0;
+  }
+
+  .challenge-kids picture {
+    display: block;
+    height: 100%;
   }
 
   .challenge-kids img {
+    width: auto;
+    height: 100%;
     max-width: 100%;
+    object-fit: contain;
+    object-position: center bottom;
   }
 
   .challenge-benefit:nth-child(3) {
@@ -289,37 +301,38 @@
     margin-top: 4px;
   }
 
-  /* wider than 1440px: the text + picture group stays as on 1440, centered */
+  /* the picture touches the right edge of the 1440 frame (design);
+     wider than 1440px the text + picture group stays as on 1440, centered */
   .challenge-banner {
-    --kids-height: 290px;
-    --kids-right: calc(max(0px, (100% - 1440px) / 2) + 35px);
+    --kids-height: 283px;
+    --kids-right: max(0px, (100% - 1440px) / 2);
 
-    align-items: center;
-    min-height: 315px;
-    padding-top: 0;
+    align-items: flex-start;
+    min-height: 340px;
+    padding-top: 60px;
     padding-right: calc(
-      var(--kids-right) + var(--kids-height) * 470 / 283 + 40px
+      var(--kids-right) + var(--kids-height) * 470 / 283 + 36px
     );
     padding-bottom: 0;
-    padding-left: calc(max(0px, (100% - 1440px) / 2) + 30px);
+    padding-left: calc(max(0px, (100% - 1440px) / 2) + 158px);
     height: auto;
   }
 
   .challenge-content {
-    width: 700px;
+    width: 776px;
     max-width: 100%;
   }
 
   .challenge-badge {
-    padding: 5px 14px;
+    padding: 4px 12px;
     font-size: 12px;
-    line-height: inherit;
+    line-height: 16px;
   }
 
   .challenge-title {
-    margin-top: 14px;
-    font-size: 40px;
-    line-height: 1.15;
+    margin-top: 12px;
+    font-size: 44px;
+    line-height: 56px;
     font-weight: 800;
     width: auto;
     max-width: none;
@@ -328,9 +341,9 @@
 
   .challenge-description {
     margin-top: 12px;
-    max-width: 620px;
+    max-width: 524px;
     font-size: 16px;
-    line-height: 1.35;
+    line-height: 20px;
     width: auto;
     text-align: inherit;
   }
@@ -338,8 +351,8 @@
   .challenge-benefits {
     display: flex;
     align-items: center;
-    gap: 14px 38px;
-    margin-top: 28px;
+    gap: 14px 30px;
+    margin-top: 32px;
     grid-template-columns: none;
     width: auto;
     position: static;
@@ -348,7 +361,7 @@
   }
 
   .challenge-benefit {
-    gap: 10px;
+    gap: 12px;
     text-align: left;
     min-width: auto;
     flex-direction: row;
@@ -356,13 +369,13 @@
   }
 
   .challenge-benefit .benefit-icon {
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
   }
 
   .challenge-benefit .benefit-icon img {
-    width: 22px;
-    height: 22px;
+    width: 28px;
+    height: 28px;
   }
 
   .benefit-info {
@@ -371,17 +384,17 @@
   }
 
   .benefit-info strong {
-    font-size: 15px;
-    line-height: 1.2;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .benefit-info span {
-    font-size: 14px;
-    line-height: 1.2;
+    font-size: 16px;
+    line-height: 20px;
   }
 
   .challenge-benefit:nth-child(3) {
-    gap: 10px;
+    gap: 12px;
     text-align: left;
     min-width: auto;
     flex-direction: row;
