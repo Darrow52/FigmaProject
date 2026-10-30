@@ -1,10 +1,10 @@
-/* Kids actually wear it (.sixth-frame) */
+/* Kids actually wear it (.section--wear) */
 
-.sixth-frame {
+.section--wear {
   display: block;
   width: 100%;
-  padding: 56px 16px;
-  background-color: rgb(247, 245, 255);
+  padding: var(--section-spacing) 16px;
+  background-color: var(--color-surface);
   overflow: hidden;
 }
 
@@ -18,40 +18,25 @@
 
 .why-works {
   display: inline-block;
-  padding: 4px 9px;
-  border-radius: 20px;
-  background-color: rgb(238, 232, 255);
-  color: rgb(94, 44, 165);
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  font-family: "Magallanes", sans-serif;
+  border-radius: var(--radius-2xl);
 }
 
 .actually-wear {
   margin: 12px auto 0;
-  font-family: Magallanes, sans-serif;
-  font-size: 28px;
-  font-weight: 800;
-  font-synthesis: none;
-  line-height: 36px;
-  color: rgb(48, 32, 74);
 }
 
 /* second line of the heading is purple */
 .actually-wear-accent {
   display: block;
-  color: rgb(94, 44, 165);
+  color: var(--color-primary);
 }
 
 .child-lead {
-  max-width: 354px;
+  max-width: max(354px, 98.9%);
   margin: 12px auto 0;
   font-size: 14px;
   line-height: 19px;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
   letter-spacing: 0.2px;
 }
 
@@ -83,16 +68,16 @@
   height: auto;
   aspect-ratio: 358 / 180;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
 }
 
 .wear-card-title {
   margin: 12px 0 0;
-  font-family: "Magallanes", sans-serif;
+  font-family: var(--font-heading);
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
   letter-spacing: -0.4px;
 }
 
@@ -100,12 +85,12 @@
   margin: 8px 0 0;
   font-size: 12px;
   line-height: 20px;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
   letter-spacing: 0.24px;
 }
 
 @media (min-width: 768px) {
-  .sixth-frame {
+  .section--wear {
     padding: 65px 30px;
   }
 
@@ -118,9 +103,7 @@
   .actually-wear {
     max-width: 850px;
     margin-top: 16px;
-    font-size: clamp(36px, 4.5vw, 48px);
     font-weight: 800;
-    line-height: 1.05;
   }
 
   .actually-wear-accent {
@@ -130,7 +113,8 @@
   .child-lead {
     max-width: 650px;
     margin-top: 20px;
-    font-size: 14px;
+    font-size: calc(14px + 2 * var(--fluid));
+    line-height: calc(19px + 1 * var(--fluid));
   }
 
   .comfortable-enough {
@@ -154,25 +138,21 @@
 
   .wear-card-title {
     margin-top: 14px;
-    font-size: 18px;
-    line-height: 1.15;
+    font-size: calc(16px + 8 * var(--fluid));
+    line-height: calc(20px + 8 * var(--fluid));
   }
 
   .wear-card-text {
     max-width: 230px;
     margin-top: 10px;
-    line-height: 1.35;
+    line-height: 20px;
+    font-size: calc(12px + 4 * var(--fluid));
   }
 }
 
 @media (min-width: 1101px) {
-  .sixth-frame {
-    padding: 80px 40px 105px;
-  }
-
-  .why-works {
-    padding: 4px 9px;
-    font-size: 12px;
+  .section--wear {
+    padding: var(--section-spacing) 40px 105px;
   }
 
   .actually-wear {
@@ -196,13 +176,13 @@
 
   .wear-cards {
     gap: 16px;
-    max-width: 1200px;
+    max-width: var(--content-width);
     margin-top: 33px;
   }
 
   .wear-card-image {
     aspect-ratio: 288 / 240;
-    border-radius: 20px;
+    border-radius: var(--radius-2xl);
   }
 
   .wear-card-title {
@@ -219,5 +199,10 @@
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.2px;
+  }
+
+  .why-works {
+    padding: 4px 9px;
+    font-size: 12px;
   }
 }

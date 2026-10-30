@@ -1,15 +1,15 @@
-/* Challenge banner (.challenge-banner) */
+/* Challenge banner (.section--challenge) */
 
-.challenge-banner {
+.section--challenge {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: rgb(247, 246, 255);
+  background-color: var(--color-surface);
   overflow: hidden;
-  padding: 56px 0 0;
+  padding: var(--section-spacing) 0 0;
 }
 
 .challenge-content {
@@ -29,31 +29,23 @@
   align-items: center;
   justify-content: center;
   padding: 4px 12px;
-  background-color: rgb(238, 232, 255);
-  border-radius: 20px;
-  color: rgb(79, 44, 160);
-  font-size: 12px;
-  text-transform: uppercase;
-  line-height: 16px;
+  border-radius: var(--radius-2xl);
+  color: var(--color-label-text);
 }
 
 .challenge-title {
   margin: 12px 0 0;
   color: rgb(89, 49, 155);
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: 800;
-  font-family: Magallanes, sans-serif;
   display: block;
   width: 100%;
-  max-width: 336px;
+  max-width: max(336px, 89.8%);
   text-align: center;
 }
 
 .challenge-description {
   margin: 12px 0 0;
-  max-width: 290px;
-  color: rgb(48, 32, 74);
+  max-width: max(290px, 77.5%);
+  color: var(--color-text);
   font-size: 12px;
   line-height: 16px;
   display: block;
@@ -73,7 +65,7 @@
   width: 100%;
   position: relative;
   z-index: 3;
-  max-width: 374px;
+  max-width: none;
 }
 
 .challenge-benefit {
@@ -93,8 +85,8 @@
   width: 44px;
   height: 44px;
   flex-shrink: 0;
-  background-color: rgb(238, 232, 255);
-  border-radius: 50%;
+  background-color: var(--color-lavender);
+  border-radius: var(--radius-round);
 }
 
 .challenge-benefit .benefit-icon img {
@@ -121,7 +113,7 @@
 
 .benefit-info span {
   margin-top: 4px;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
   font-size: 12px;
   line-height: 16px;
   display: block;
@@ -156,24 +148,14 @@
 }
 
 .benefit-info strong {
-  font-family: "Magallanes", sans-serif;
+  font-family: var(--font-heading);
   font-weight: 800;
   letter-spacing: -0.4px;
 }
 
-.challenge-badge {
-  font-family: "Magallanes", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-}
-
-.challenge-title {
-  font-synthesis: none;
-}
-
 @media (min-width: 768px) {
 
-  .challenge-banner {
+  .section--challenge {
     --kids-height: clamp(170px, 22vw, 225px);
     --kids-right: 18px;
 
@@ -197,12 +179,11 @@
 
   .challenge-badge {
     padding: 4px 12px;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 16px;
   }
 
   .challenge-title {
-    font-size: clamp(30px, 4vw, 40px);
     font-weight: 800;
     width: auto;
     max-width: none;
@@ -211,8 +192,8 @@
 
   .challenge-description {
     max-width: 570px;
-    font-size: 13px;
-    line-height: 1.35;
+    font-size: calc(12px + 4 * var(--fluid));
+    line-height: calc(16px + 4 * var(--fluid));
     width: auto;
     text-align: inherit;
   }
@@ -253,14 +234,14 @@
   }
 
   .benefit-info strong {
-    font-size: 12px;
-    line-height: 1.2;
+    font-size: calc(14px + 2 * var(--fluid));
+    line-height: 20px;
   }
 
   .benefit-info span {
     margin-top: 3px;
-    font-size: 11px;
-    line-height: 1.2;
+    font-size: calc(12px + 4 * var(--fluid));
+    line-height: calc(16px + 4 * var(--fluid));
   }
 
   .challenge-kids {
@@ -299,9 +280,9 @@
     margin-top: 4px;
   }
 
-  .challenge-banner {
+  .section--challenge {
     --kids-height: 283px;
-    --kids-right: max(0px, (100% - 1440px) / 2);
+    --kids-right: max(0px, (100% - var(--container-width)) / 2);
 
     align-items: flex-start;
     min-height: 340px;
@@ -309,8 +290,10 @@
     padding-right: calc(
       var(--kids-right) + var(--kids-height) * 470 / 283 + 36px
     );
-    padding-bottom: 0;
-    padding-left: calc(max(0px, (100% - 1440px) / 2) + 158px);
+    /* 60px below the text too: when the text gets taller on narrower
+       screens it does not stick to the bottom edge */
+    padding-bottom: 60px;
+    padding-left: calc(max(0px, (100% - var(--container-width)) / 2) + 158px);
     height: auto;
   }
 
@@ -327,12 +310,11 @@
 
   .challenge-title {
     margin-top: 12px;
-    font-size: 44px;
-    line-height: 56px;
-    font-weight: 800;
     width: auto;
     max-width: none;
     text-align: inherit;
+    font-size: 44px;
+    font-weight: 800;
   }
 
   .challenge-description {

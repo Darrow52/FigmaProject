@@ -1,9 +1,9 @@
 /* =========================
-   FAQ (.faq-frame): accordion
+   FAQ (.section--faq): accordion
    ========================= */
 
 function initFaq() {
-  document.querySelectorAll(".faq-frame .question").forEach((question) => {
+  document.querySelectorAll(".section--faq .question").forEach((question) => {
     const ask = question.querySelector(".ask");
     const toggle = question.querySelector(".faq-toggle");
 

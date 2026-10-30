@@ -1,10 +1,10 @@
-/* Reviews carousel (.eighth-frame) */
+/* Reviews carousel (.section--reviews) */
 
-.eighth-frame {
+.section--reviews {
   display: block;
   width: 100%;
-  padding: 56px 0;
-  background-color: rgb(255, 255, 255);
+  padding: var(--section-spacing) 0;
+  background-color: var(--color-white);
 }
 
 .reviews-header {
@@ -20,20 +20,14 @@
   align-items: center;
   justify-content: center;
   padding: 4px 12px;
-  background-color: rgb(238, 232, 255);
-  border-radius: 20px;
+  border-radius: var(--radius-2xl);
   color: rgb(53, 38, 165);
-  font-size: 12px;
-  text-transform: uppercase;
 }
 
 .reviews-title {
   margin: 8px 0 0;
-  font-size: 28px;
-  line-height: 36px;
-  color: rgb(48, 32, 74);
   width: 100%;
-  max-width: 350px;
+  max-width: max(350px, 89.7%);
 }
 
 .reviews-title span {
@@ -42,22 +36,25 @@
 
 .reviews-description {
   margin: 8px 0 0;
-  max-width: 340px;
+  max-width: max(340px, 87.2%);
   font-size: 14px;
   line-height: 19px;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
   width: 100%;
   font-weight: 500;
 }
 
+/* the slider: arrows (tablets and desktop) + a strip that scrolls and clips
+   the slides at its edges; slides keep their size and proportions */
+.reviews-slider {
+  margin-top: 32px;
+}
+
 .reviews-carousel {
   display: flex;
-  grid-template-columns: 40px minmax(0px, 1fr) minmax(0px, 1fr) 40px;
-  gap: 12px;
-  align-items: stretch;
-  max-width: none;
-  margin: 32px auto 0;
-  width: 100%;
+  gap: 20px;
+  padding: 0 16px;
+  scroll-padding: 0 16px;
   overflow: auto hidden;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
@@ -68,23 +65,25 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 24px;
 }
 
+/* phones: the video and the text of a review are separate slides (design) */
 .review-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-width: 0px;
+  display: contents;
+}
+
+.review-video,
+.review-text {
+  flex: 0 0 300px;
+  height: 400px;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  border-radius: 10px;
-  flex: 0 0 92%;
-  width: 92%;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
 }
 
 .review-video {
   display: block;
-  min-width: 0px;
 }
 
 .review-video img {
@@ -97,10 +96,9 @@
 .review-text {
   display: flex;
   flex-direction: column;
-  padding: 12px;
-  background-color: rgb(245, 242, 255);
-  color: rgb(48, 32, 74);
-  min-width: 0px;
+  padding: 24px;
+  background-color: var(--color-surface);
+  color: var(--color-text);
 }
 
 .carousel-arrow img {
@@ -137,7 +135,7 @@
 .verified {
   font-size: 12px;
   line-height: 1;
-  color: rgb(94, 44, 165);
+  color: var(--color-primary);
 }
 
 .review-logo {
@@ -156,38 +154,44 @@
 .review-author {
   font-size: 16px;
   line-height: 1.2;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
 }
 
 .review-title {
   margin: 8px 0 0;
   font-size: 24px;
   line-height: 28px;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
 }
 
 .review-text > p {
   margin: 8px 0 0;
   font-size: 14px;
   line-height: 20px;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
 }
 
-.eighth-frame .reviews-carousel::-webkit-scrollbar {
+.reviews-carousel::-webkit-scrollbar {
   display: none;
 }
 
 .carousel-arrow {
-  align-self: center;
+  flex-shrink: 0;
   width: 36px;
   height: 36px;
   display: none;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border-radius: 50%;
-  background-color: #eee8ff;
+  border-radius: var(--radius-round);
+  background-color: var(--color-lavender);
   padding: 8px;
+}
+
+/* at the first / last slide */
+.carousel-arrow:disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 
 .reviews-dot {
@@ -197,7 +201,7 @@
   padding: 0;
   margin: 0;
   border: 0px;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   background-color: rgb(216, 209, 236);
   cursor: pointer;
 }
@@ -209,13 +213,13 @@
   padding: 0;
   margin: 0;
   border: 0px;
-  border-radius: 10px;
-  background-color: rgb(48, 32, 74);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-text);
   cursor: pointer;
 }
 
 .review-author {
-  font-family: "Magallanes", sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
 }
 
@@ -224,24 +228,9 @@
   font-weight: 900;
 }
 
-.reviews-title {
-  font-family: "Magallanes", sans-serif;
-  font-weight: 800;
-}
-
 .review-title {
-  font-family: "Magallanes", sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
-}
-
-.trusted-badge {
-  font-family: "Magallanes", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-}
-
-.reviews-title {
-  font-synthesis: none;
 }
 
 .review-title {
@@ -249,7 +238,7 @@
 }
 
 @media (min-width: 768px) {
-  .eighth-frame {
+  .section--reviews {
     padding: 60px 30px;
   }
 
@@ -259,13 +248,12 @@
 
   .trusted-badge {
     padding: 5px 12px;
-    font-size: 11px;
+    font-size: 12px;
+    line-height: normal;
   }
 
   .reviews-title {
     margin-top: 15px;
-    font-size: clamp(34px, 4.3vw, 44px);
-    line-height: 1.08;
     width: auto;
     max-width: 850px;
   }
@@ -273,157 +261,40 @@
   .reviews-description {
     margin-top: 12px;
     max-width: 600px;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: calc(14px + 2 * var(--fluid));
+    line-height: calc(19px + 1 * var(--fluid));
     width: auto;
   }
 
-  .reviews-carousel {
-    display: grid;
-    grid-template-columns: 28px minmax(0px, 1fr) minmax(0px, 1fr) 28px;
-    max-width: 1000px;
-    margin-top: 25px;
-    width: auto;
-    overflow: visible;
-  }
-
-  .reviews-dots {
-    display: none;
-    align-items: normal;
-    justify-content: normal;
-    gap: normal;
-    margin-top: 0px;
-  }
-
-  .review-card {
-    width: auto;
-  }
-
-  .review-text {
-    padding: 14px;
-  }
-
-  .verified-row {
-    gap: 4px;
-  }
-
-  .verified-icon img {
-    width: 10px;
-    height: 10px;
-  }
-
-  .verified {
-    font-size: 10px;
-  }
-
-  .review-logo {
-    padding-top: 10px;
-  }
-
-  .review-logo img {
-    width: 90px;
-  }
-
-  .review-author {
-    font-size: 13px;
-  }
-
-  .review-title {
-    margin-top: 9px;
-    font-size: 16px;
-    line-height: 1.2;
-  }
-
-  .review-text > p {
-    margin-top: 10px;
-    font-size: 11px;
-    line-height: 1.35;
-  }
-
-  .eighth-frame .reviews-carousel::-webkit-scrollbar {
-    display: block;
-  }
-
-  .carousel-arrow {
-    width: 36px;
-    height: 36px;
+  .reviews-slider {
     display: flex;
-  }
-
-  .reviews-dot {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    padding: 1px 6px;
-    border-radius: 0px;
-    background-color: rgb(240, 240, 240);
-  }
-
-  .reviews-dot.active {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    padding: 1px 6px;
-    border-radius: 0px;
-    background-color: rgb(240, 240, 240);
-  }
-}
-
-@media (min-width: 1101px) {
-  .reviews-carousel {
-    grid-template-columns: 44px minmax(0, 536px) minmax(0, 536px) 44px;
+    align-items: center;
     justify-content: center;
+    gap: 16px;
+    margin-top: 25px;
   }
 
-  .left-arrow {
-    justify-self: start;
-  }
-
-  .right-arrow {
-    justify-self: end;
-  }
-
-  .carousel-arrow {
-    width: 36px;
-    height: 36px;
-  }
-
-  .eighth-frame {
-    padding: 80px 64px;
-  }
-
-  .reviews-header {
-    width: auto;
-  }
-
-  .trusted-badge {
-    padding: 4px 12px;
-    font-size: 12px;
-  }
-
-  .reviews-title {
-    margin-top: 12px;
-    font-size: 44px;
-    line-height: 56px;
-    width: auto;
-    max-width: none;
-  }
-
-  .reviews-description {
-    margin-top: 12px;
-    max-width: 650px;
-    font-size: 16px;
-    line-height: 20px;
-    width: auto;
-  }
-
+  /* one slide = video + text, 2 x 260x400 (design); at most two slides */
   .reviews-carousel {
-    display: grid;
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 1096px;
     gap: 24px;
-    max-width: 1312px;
-    margin-top: 32px;
-    width: auto;
-    overflow: visible;
+    padding: 0;
+    scroll-padding: 0;
+  }
+
+  .review-card {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 16px;
+    scroll-snap-align: start;
+  }
+
+  .review-video,
+  .review-text {
+    flex-basis: 260px;
+    scroll-snap-align: none;
   }
 
   .reviews-dots {
@@ -432,17 +303,10 @@
     justify-content: normal;
     gap: normal;
     margin-top: 0px;
-  }
-
-  .review-card {
-    border-radius: 0;
-    width: auto;
-    column-gap: 16px;
   }
 
   .review-text {
     padding: 24px 20px 24px 16px;
-    border-radius: 12px;
   }
 
   .verified-row {
@@ -492,8 +356,73 @@
     line-height: 19px;
   }
 
-  .eighth-frame .reviews-carousel::-webkit-scrollbar {
-    display: block;
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    display: flex;
+  }
+
+  .reviews-dot {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 1px 6px;
+    border-radius: 0px;
+    background-color: var(--color-gray-light);
+  }
+
+  .reviews-dot.active {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 1px 6px;
+    border-radius: 0px;
+    background-color: var(--color-gray-light);
+  }
+}
+
+@media (min-width: 1101px) {
+  /* arrows 32px from the slides (design) */
+  .reviews-slider {
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .section--reviews {
+    padding: var(--section-spacing) 64px;
+  }
+
+  .reviews-header {
+    width: auto;
+  }
+
+  .trusted-badge {
+    padding: 4px 12px;
+    font-size: 12px;
+  }
+
+  .reviews-title {
+    margin-top: 12px;
+    width: auto;
+    max-width: none;
+    font-size: 44px;
+    line-height: 56px;
+  }
+
+  .reviews-description {
+    margin-top: 12px;
+    max-width: 650px;
+    font-size: 16px;
+    line-height: 20px;
+    width: auto;
+  }
+
+  .reviews-dots {
+    display: none;
+    align-items: normal;
+    justify-content: normal;
+    gap: normal;
+    margin-top: 0px;
   }
 
   .carousel-arrow {
@@ -506,7 +435,7 @@
     height: auto;
     padding: 1px 6px;
     border-radius: 0px;
-    background-color: rgb(240, 240, 240);
+    background-color: var(--color-gray-light);
   }
 
   .reviews-dot.active {
@@ -515,6 +444,6 @@
     height: auto;
     padding: 1px 6px;
     border-radius: 0px;
-    background-color: rgb(240, 240, 240);
+    background-color: var(--color-gray-light);
   }
 }

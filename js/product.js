@@ -1,5 +1,5 @@
 /* =========================
-   PRODUCT (.seventh-frame): gallery, lightbox, purchase options
+   PRODUCT (.section--product): gallery, lightbox, purchase options
    ========================= */
 
 function copyImage(from, to) {
@@ -171,7 +171,7 @@ function initPurchaseOptions(section) {
 }
 
 function initProduct() {
-  const section = document.querySelector(".seventh-frame");
+  const section = document.querySelector(".section--product");
 
   if (!section) {
     return;

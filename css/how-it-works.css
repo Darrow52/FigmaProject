@@ -1,31 +1,15 @@
-/* How it works (.fifth-frame) */
-
-@keyframes benefits-scroll {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-25%);
-  }
-}
+/* The Solution (.section--solution) */
 
 .the-solution {
   display: inline-flex;
-  padding: 4px 9px;
-  border-radius: 20px;
-  background-color: rgb(238, 232, 255);
-  color: rgb(94, 44, 165);
-  font-size: 12px;
-  text-transform: uppercase;
-  line-height: 16px;
+  border-radius: var(--radius-2xl);
 }
 
-.fifth-frame {
+.section--solution {
   display: block;
   width: 100%;
   padding: 0 16px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-white);
   overflow: hidden;
 }
 
@@ -41,12 +25,7 @@
 .how-is {
   display: block;
   margin: 12px auto 0;
-  max-width: 390px;
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: 800;
-  color: rgb(48, 32, 74);
-  font-family: Magallanes, sans-serif;
+  max-width: none;
   width: 100%;
   text-align: center;
 }
@@ -147,62 +126,11 @@
   z-index: 5;
 }
 
-.benefits-track {
-  display: flex;
-  align-items: center;
-  width: max-content;
-  height: 40px;
-  /* one group per loop: ~33px per second */
-  animation: 29s linear 0s infinite normal none running benefits-scroll;
-}
-
-.benefits-group {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  flex-shrink: 0;
-  height: 40px;
-  padding-right: 32px;
-}
-
-.marquee-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-  font-family: "Magallanes", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: -0.4px;
-  color: rgb(48, 32, 74);
-  white-space: nowrap;
-  font-synthesis: none;
-}
-
-.marquee-item img {
-  display: block;
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-}
-
 .disc-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   max-width: none;
-  height: 56px;
   padding: 0 20px;
-  border-radius: 40px;
-  background-color: rgb(94, 44, 165);
-  color: white;
-  font-size: 14px;
   line-height: 1;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 .sleep-help {
@@ -227,31 +155,17 @@
   padding: 0;
 }
 
-.benefits-carousel {
-  position: relative;
-  z-index: 2;
-  display: block;
-  height: 79px;
-  margin: 0 -16px;
-  padding: 20px 0;
-  background-color: #f7f6fd;
-  overflow: hidden;
-  touch-action: pan-y;
-  user-select: none;
-  border-bottom: 1px solid #cec3ee;
-}
-
 .sleep-benefits > * {
   position: relative;
   z-index: 3;
 }
 
 .sleep-help > p {
-  max-width: 390px;
+  max-width: none;
   margin: 12px auto 0;
   font-size: 14px;
   line-height: 19px;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
   width: 100%;
   display: block;
   text-align: center;
@@ -315,7 +229,7 @@
   margin: 0;
   font-size: 20px;
   line-height: 24px;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
   text-align: left;
 }
 
@@ -325,7 +239,7 @@
   font-size: 14px;
   line-height: 19px;
   display: block;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
   text-align: left;
   letter-spacing: 0.2px;
 }
@@ -347,13 +261,13 @@
 
 .trust-text p {
   margin: 0;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
   font-size: 14px;
   line-height: 19px;
   font-weight: 500;
 }
 
-.fifth-frame > .clouds {
+.section--solution > .clouds {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -365,7 +279,7 @@
   overflow: hidden;
 }
 
-.fifth-frame > .clouds img:nth-child(1) {
+.section--solution > .clouds img:nth-child(1) {
   position: absolute;
   width: 170px;
   height: auto;
@@ -377,7 +291,7 @@
   user-select: none;
 }
 
-.fifth-frame > .clouds img:nth-child(2) {
+.section--solution > .clouds img:nth-child(2) {
   position: absolute;
   width: 170px;
   height: auto;
@@ -414,35 +328,19 @@
 }
 
 .sleep-text {
-  font-family: "Magallanes", sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
-}
-
-.the-solution {
-  font-family: "Magallanes", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-}
-
-.disc-button {
-  font-family: "Avenir", sans-serif;
-  font-weight: 900;
-  letter-spacing: 0.02em;
-}
-
-.how-is {
-  font-synthesis: none;
 }
 
 .sleep-text {
   font-synthesis: none;
 }
 
-.fifth-frame {
+.section--solution {
   position: relative;
 }
 
-.fifth-frame > .clouds {
+.section--solution > .clouds {
   z-index: 0;
 }
 
@@ -450,25 +348,6 @@
 .sleep-benefits,
 .discover-button {
   z-index: 2;
-}
-
-.benefits-carousel.is-paused .benefits-track,
-.benefits-carousel.is-dragging .benefits-track {
-  animation-play-state: paused;
-}
-
-@media (hover: hover) {
-  .benefits-carousel:hover .benefits-track {
-    animation-play-state: paused;
-  }
-
-  .benefits-carousel {
-    cursor: grab;
-  }
-
-  .benefits-carousel.is-dragging {
-    cursor: grabbing;
-  }
 }
 
 @media (min-width: 768px) {
@@ -479,7 +358,7 @@
     line-height: inherit;
   }
 
-  .fifth-frame {
+  .section--solution {
     padding-top: 55px;
     padding-right: 30px;
     padding-left: 30px;
@@ -493,8 +372,6 @@
     margin-right: 0px;
     margin-left: 0px;
     max-width: 850px;
-    font-size: clamp(35px, 4.5vw, 48px);
-    line-height: 1.05;
     font-weight: 800;
     width: auto;
     text-align: inherit;
@@ -588,7 +465,7 @@
     height: 54px;
     padding-right: 0px;
     padding-left: 0px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: inherit;
   }
 
@@ -605,17 +482,11 @@
     min-height: 430px;
   }
 
-  .benefits-carousel {
-    margin: 0 -30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
   .sleep-help > p {
     max-width: 700px;
     margin-top: 18px;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: calc(14px + 2 * var(--fluid));
+    line-height: calc(19px + 1 * var(--fluid));
     width: auto;
     text-align: inherit;
   }
@@ -659,15 +530,18 @@
   .sleep-text {
     color: inherit;
     text-align: inherit;
+    font-size: calc(20px + 4 * var(--fluid));
+    line-height: calc(24px + 4 * var(--fluid));
   }
 
   .benefit > p {
     max-width: 250px;
     margin-top: 10px;
     margin-bottom: 13px;
-    line-height: 1.35;
+    line-height: calc(19px + 1 * var(--fluid));
     color: inherit;
     text-align: inherit;
+    font-size: calc(14px + 2 * var(--fluid));
   }
 
   .trust-text {
@@ -682,16 +556,16 @@
   }
 
   .trust-text p {
-    font-size: 13px;
+    font-size: 14px;
   }
 
-  .fifth-frame > .clouds img:nth-child(1) {
+  .section--solution > .clouds img:nth-child(1) {
     width: 280px;
     top: 85px;
     z-index: 0;
   }
 
-  .fifth-frame > .clouds img:nth-child(2) {
+  .section--solution > .clouds img:nth-child(2) {
     width: 280px;
     top: 85px;
     z-index: 0;
@@ -716,19 +590,13 @@
     padding-left: 9px;
   }
 
-  .benefits-carousel {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-
   .the-solution {
     display: inline-block;
-    font-size: 12px;
     line-height: inherit;
   }
 
-  .fifth-frame {
-    padding: 80px 40px 0;
+  .section--solution {
+    padding: var(--section-spacing) 40px 0;
   }
 
   .discover-button {
@@ -741,11 +609,11 @@
     margin-right: 0px;
     margin-left: 0px;
     max-width: 1100px;
+    width: auto;
+    text-align: inherit;
     font-size: 44px;
     line-height: 56px;
     font-weight: 800;
-    width: auto;
-    text-align: inherit;
   }
 
   .sleep-pod {
@@ -833,11 +701,11 @@
   .disc-button {
     width: 347px;
     max-width: none;
-    height: 56px;
     padding-right: 0px;
     padding-left: 0px;
-    font-size: 14px;
     line-height: inherit;
+    height: 56px;
+    font-size: 14px;
   }
 
   .sleep-benefits {
@@ -851,20 +719,6 @@
     margin-right: auto;
     margin-left: auto;
     width: auto;
-  }
-
-  .benefits-carousel {
-    height: 79px;
-    margin: 0 -40px;
-  }
-
-  .benefits-track {
-    animation-duration: 33s;
-  }
-
-  .benefits-group {
-    gap: 68px;
-    padding-right: 68px;
   }
 
   .sleep-help > p {
@@ -952,14 +806,14 @@
     font-size: 14px;
   }
 
-  .fifth-frame > .clouds img:nth-child(1) {
+  .section--solution > .clouds img:nth-child(1) {
     width: 400px;
     left: -30px;
     top: 100px;
     z-index: 0;
   }
 
-  .fifth-frame > .clouds img:nth-child(2) {
+  .section--solution > .clouds img:nth-child(2) {
     width: 400px;
     right: -30px;
     top: 100px;
@@ -978,11 +832,5 @@
     right: -20px;
     bottom: 110px;
     z-index: 0;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .benefits-track {
-    animation: none;
   }
 }

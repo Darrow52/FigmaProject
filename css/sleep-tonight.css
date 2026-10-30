@@ -1,12 +1,12 @@
-/* Sleep tonight (.tenz-frame) */
+/* Sleep tonight (.section--better-sleep) */
 
-.tenz-frame {
+.section--better-sleep {
   display: block;
   width: 100%;
 
   height: max(671px, 172vw);
   overflow: hidden;
-  background-color: rgb(248, 247, 255);
+  background-color: var(--color-surface);
 }
 
 .review-line {
@@ -35,17 +35,14 @@
   margin-left: 10px;
   font-size: 14px;
   line-height: 18px;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
 }
 
 .sleep-tonight {
   display: block;
   width: 100%;
   margin: 8px 0 0;
-  font-size: 28px;
-  line-height: 36px;
-  color: rgb(48, 32, 74);
-  max-width: 358px;
+  max-width: none;
   text-align: center;
 }
 
@@ -55,24 +52,15 @@
   margin: 12px 0 0;
   font-size: 14px;
   line-height: 19px;
-  color: rgb(48, 32, 74);
-  max-width: 358px;
+  color: var(--color-text);
+  max-width: none;
   text-align: center;
 }
 
 .start-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 52px;
   margin-top: 15px;
-  border-radius: 30px;
-  background-color: rgb(94, 44, 165);
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-  cursor: pointer;
   max-width: none;
 }
 
@@ -97,7 +85,7 @@
   margin: 0;
   font-size: 12px;
   line-height: 16px;
-  color: rgb(48, 32, 74);
+  color: var(--color-text);
   position: relative;
   z-index: 3;
 }
@@ -124,7 +112,7 @@
   margin: 0 auto;
   padding-top: 50px;
   text-align: center;
-  max-width: 358px;
+  max-width: none;
 }
 
 .sleeping-image {
@@ -144,7 +132,7 @@
   z-index: 3;
 }
 
-.tenz-frame > .clouds {
+.section--better-sleep > .clouds {
   display: none;
   position: absolute;
   top: 0px;
@@ -157,7 +145,7 @@
   overflow: hidden;
 }
 
-.tenz-frame > .clouds img:first-child {
+.section--better-sleep > .clouds img:first-child {
   position: absolute;
   width: 150px;
   height: auto;
@@ -169,7 +157,7 @@
   user-select: none;
 }
 
-.tenz-frame > .clouds img:last-child {
+.section--better-sleep > .clouds img:last-child {
   position: absolute;
   width: 150px;
   height: auto;
@@ -181,36 +169,25 @@
   user-select: none;
 }
 
-.sleep-tonight {
-  font-family: "Magallanes", sans-serif;
-  font-weight: 800;
-}
-
 .start-button {
-  font-family: "Avenir", sans-serif;
   font-weight: 700;
-  letter-spacing: 0.02em;
 }
 
 .stars {
-  font-family: "Avenir", sans-serif;
+  font-family: var(--font-primary);
   font-weight: 700;
 }
 
-.sleep-tonight {
-  font-synthesis: none;
-}
-
-.tenz-frame {
+.section--better-sleep {
   position: relative;
 }
 
-.tenz-frame > .clouds {
+.section--better-sleep > .clouds {
   z-index: 0;
 }
 
 @media (min-width: 768px) {
-  .tenz-frame {
+  .section--better-sleep {
     height: 520px;
   }
 
@@ -225,14 +202,14 @@
 
   .sleep-review {
     margin-left: 8px;
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .sleep-tonight {
     width: 520px;
     margin-top: 15px;
-    font-size: clamp(35px, 4.5vw, 48px);
-    line-height: 1.08;
+    font-size: calc(28px + 24 * var(--fluid));
+    line-height: calc(36px + 26 * var(--fluid));
     max-width: 100%;
     text-align: inherit;
   }
@@ -240,16 +217,17 @@
   .sleepod-description {
     width: 500px;
     margin-top: 11px;
-    font-size: 13px;
+    font-size: calc(14px + 4 * var(--fluid));
     max-width: 470px;
     text-align: inherit;
+    line-height: calc(19px + 5 * var(--fluid));
   }
 
   .start-button {
     width: 300px;
     height: 50px;
     margin-top: 24px;
-    font-size: 12px;
+    font-size: 14px;
     max-width: 100%;
   }
 
@@ -259,7 +237,8 @@
   }
 
   .under-text p {
-    font-size: 11px;
+    font-size: calc(12px + 2 * var(--fluid));
+    line-height: calc(16px + 2 * var(--fluid));
   }
 
   .better-sleep {
@@ -268,7 +247,7 @@
     max-width: 70%;
   }
 
-  .tenz-frame > .clouds {
+  .section--better-sleep > .clouds {
     display: block;
   }
 
@@ -280,19 +259,19 @@
     height: auto;
   }
 
-  .tenz-frame > .clouds img:first-child {
+  .section--better-sleep > .clouds img:first-child {
     width: 190px;
     top: 30px;
   }
 
-  .tenz-frame > .clouds img:last-child {
+  .section--better-sleep > .clouds img:last-child {
     width: 190px;
     top: 45px;
   }
 }
 
 @media (min-width: 1101px) {
-  .tenz-frame {
+  .section--better-sleep {
     height: 639px;
   }
 
@@ -330,10 +309,10 @@
 
   .start-button {
     width: 541px;
-    height: 56px;
     margin-top: 20px;
-    font-size: 14px;
     max-width: none;
+    height: 56px;
+    font-size: 14px;
   }
 
   .under-text {
@@ -357,13 +336,13 @@
     max-width: none;
   }
 
-  .tenz-frame > .clouds img:first-child {
+  .section--better-sleep > .clouds img:first-child {
     width: 220px;
     left: -50px;
     top: 35px;
   }
 
-  .tenz-frame > .clouds img:last-child {
+  .section--better-sleep > .clouds img:last-child {
     width: 220px;
     right: -50px;
     top: 55px;

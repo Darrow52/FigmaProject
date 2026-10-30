@@ -1,11 +1,16 @@
-/* Hug Sleep banner (.hs-banner): "Their Body Is Tired. ... This Is Where Hug Sleep Comes In." */
+/* Hug Sleep banner (.section--banner > .hs-banner):
+   "Their Body Is Tired. ... This Is Where Hug Sleep Comes In." */
+
+.section--banner {
+  padding-bottom: 56px;
+}
 
 .hs-banner {
-  margin: 32px 16px 56px;
+  margin: 0 16px;
   padding: 28px 20px 26px;
-  background-color: #eee8ff;
-  border-radius: 10px;
-  color: #30204a;
+  background-color: var(--color-lavender);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
 }
 
 /* moon icon from the design: tablets and desktop only */
@@ -22,7 +27,7 @@
 .help-settling,
 .this-where {
   margin: 0;
-  font-family: "Magallanes", sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   font-synthesis: none;
 }
@@ -37,7 +42,7 @@
   margin-top: 13px;
   font-size: 15px;
   line-height: 1.25;
-  color: #5e2ca5;
+  color: var(--color-primary);
 }
 
 .hs-banner-brand {
@@ -83,14 +88,18 @@
 }
 
 @media (min-width: 768px) {
+  .section--banner {
+    padding-bottom: 30px;
+  }
+
   .hs-banner {
     display: flex;
     align-items: center;
     width: calc(100% - 60px);
-    max-width: 1200px;
-    margin: 62px auto 30px;
+    max-width: var(--content-width);
+    margin: 0 auto;
     padding: 28px 30px 28px 24px;
-    border-radius: 16px;
+    border-radius: var(--radius-xl);
   }
 
   .hs-banner-moon {
@@ -109,12 +118,12 @@
   }
 
   .tired-body {
-    font-size: 24px;
+    font-size: calc(23px + 1 * var(--fluid));
   }
 
   .help-settling {
     margin-top: 10px;
-    font-size: 17px;
+    font-size: calc(15px + 3.5 * var(--fluid));
   }
 
   .hs-banner-brand {
@@ -127,11 +136,11 @@
   }
 
   .this-where {
-    font-size: 16px;
+    font-size: calc(15px + 5 * var(--fluid));
   }
 
   .comes-in {
-    font-size: 16px;
+    font-size: calc(14px + 7 * var(--fluid));
   }
 
   .comes-in img {
@@ -148,9 +157,13 @@
 }
 
 @media (min-width: 1101px) {
+  .section--banner {
+    padding-bottom: 0;
+  }
+
   .hs-banner {
     width: calc(100% - 80px);
-    margin: 80px auto 0;
+    margin: 0 auto;
     padding: 32px 49px 32px 40px;
     border-radius: 18px;
   }

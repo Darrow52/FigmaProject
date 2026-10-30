@@ -42,6 +42,41 @@
   font-weight: 800;
 }
 
+/* design tokens: values used in many places (colours, fonts, radii, widths,
+   section spacing); change them here to change them everywhere */
+:root {
+  --color-text: #30204a;
+  --color-primary: #5e2ca5;
+  --color-label-text: #4f2ca0;
+  --color-white: #ffffff;
+  --color-lavender: #eee8ff;
+  --color-surface: #f8f7ff;
+  --color-border: #e4dcf7;
+  --color-gray-light: #f0f0f0;
+  --color-star: #ffb000;
+
+  --font-primary: "Avenir", sans-serif;
+  --font-heading: "Magallanes", sans-serif;
+
+  --radius-xs: 8px;
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+  --radius-pill: 999px;
+  --radius-round: 50%;
+
+  --container-width: 1440px;
+  --content-width: 1200px;
+  --section-spacing: 56px;
+
+  /* tablets (768-1100px): 0px at 768px, ~1px at 1100px. A size that grows
+     from M (phone) to D (desktop) is calc(M + (D - M) * var(--fluid)), so all
+     texts scale together instead of each one on its own */
+  --fluid: calc((100vw - 768px) / 333);
+}
+
 *,
 *::before,
 *::after {
@@ -55,10 +90,10 @@ body {
 }
 
 body {
-  font-family: "Avenir", sans-serif;
+  font-family: var(--font-primary);
   font-size: 14px;
   font-weight: 500;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   color-scheme: light;
 }
 
@@ -80,13 +115,71 @@ img {
   border: 0;
 }
 
+/* ===== shared components =====
+   .btn   - purple pill button; .btn--gradient - the newsletter variant
+   .label - small uppercase badge above a section title
+   .title - section title (h1/h2); sections only override what differs */
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn--gradient {
+  border-radius: 9px;
+  background: linear-gradient(90deg, rgb(200, 107, 216), rgb(85, 32, 160));
+  font-weight: 700;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.label {
+  display: inline-block;
+  padding: 4px 9px;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-lavender);
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-synthesis: none;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 36px;
+  font-synthesis: none;
+}
+
+/* line break that exists only in the desktop design */
 .desktop-break {
   display: none;
 }
 
 
 .title-accent {
-  color: rgb(94, 44, 165);
+  color: var(--color-primary);
 }
 
 .mobile-break {
@@ -100,14 +193,19 @@ img {
   margin: 14px 0 0;
   position: relative;
   top: -4px;
-  font-family: "Avenir", sans-serif;
+  font-family: var(--font-primary);
   font-size: 13px;
   font-weight: 700;
   line-height: 1;
-  color: rgb(255, 176, 0);
+  color: var(--color-star);
 }
 
 @media (min-width: 768px) {
+  .title {
+    font-size: calc(28px + 16 * var(--fluid));
+    line-height: calc(36px + 20 * var(--fluid));
+  }
+
   body {
     font-size: 16px;
   }
@@ -124,6 +222,15 @@ img {
 }
 
 @media (min-width: 1101px) {
+  :root {
+    --section-spacing: 80px;
+  }
+
+  .title {
+    font-size: 44px;
+    line-height: 56px;
+  }
+
   .desktop-break {
     display: inline;
   }

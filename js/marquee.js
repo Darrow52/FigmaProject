@@ -1,5 +1,5 @@
 /* =========================
-   MARQUEES (.brand-visual, .benefits-carousel):
+   MARQUEES (.section--logos, .section--benefits):
    - swipe / mouse drag left or right: moves the strip, after that it
      keeps running in its usual direction from the new place;
    - tap (phones, tablets): pause / resume.
@@ -83,6 +83,6 @@ function initMarquee(marquee) {
 
 function initMarquees() {
   document
-    .querySelectorAll(".brand-visual, .benefits-carousel")
+    .querySelectorAll(".section--logos, .section--benefits")
     .forEach(initMarquee);
 }

@@ -1,4 +1,4 @@
-/* Brand marquee (.brand-visual) */
+/* Brand marquee (.section--logos) */
 
 @keyframes brand-scroll {
   from {
@@ -10,7 +10,7 @@
   }
 }
 
-.brand-visual {
+.section--logos {
   display: block;
   width: 100%;
   height: 78px;
@@ -46,21 +46,21 @@
   flex-shrink: 0;
 }
 
-.brand-visual.is-paused .brand-track,
-.brand-visual.is-dragging .brand-track {
+.section--logos.is-paused .brand-track,
+.section--logos.is-dragging .brand-track {
   animation-play-state: paused;
 }
 
 @media (hover: hover) {
-  .brand-visual:hover .brand-track {
+  .section--logos:hover .brand-track {
     animation-play-state: paused;
   }
 
-  .brand-visual {
+  .section--logos {
     cursor: grab;
   }
 
-  .brand-visual.is-dragging {
+  .section--logos.is-dragging {
     cursor: grabbing;
   }
 }
