@@ -427,8 +427,6 @@
   min-height: 66px;
 }
 
-/* phones and tablets: title on one line, the badges under it, the price on
-   the right (design); desktop: everything in one row */
 .two-option-header {
   display: grid;
   grid-template-columns: auto auto auto 1fr;

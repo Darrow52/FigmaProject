@@ -18,8 +18,6 @@
   margin: 0;
 }
 
-/* "Frequently Asked" / "Questions" on phones and tablets,
-   "Frequently" / "Asked Questions" on desktop (design) */
 .faq-heading .title-accent {
   display: block;
 }
@@ -164,7 +162,6 @@
 }
 
 @media (min-width: 1101px) {
-
   .section--faq {
     grid-template-columns: minmax(0, 383px) minmax(0, 669px);
     justify-content: center;

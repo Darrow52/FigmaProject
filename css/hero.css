@@ -586,9 +586,6 @@
     width: auto;
     text-align: initial;
     max-width: 502px;
-    /* the column is centred next to the photo: equal extra room above and
-       below keeps it in place on 1440 and gives the button air at
-       1101-1280px, where the text is taller than the photo */
     padding-top: 53px;
     padding-bottom: 24px;
   }

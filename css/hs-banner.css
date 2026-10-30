@@ -13,7 +13,6 @@
   color: var(--color-text);
 }
 
-/* moon icon from the design: tablets and desktop only */
 .hs-banner-moon {
   display: none;
 }
@@ -168,7 +167,6 @@
     border-radius: 18px;
   }
 
-  /* icon at 37/38px from the banner corner, text at 198px (design) */
   .hs-banner-moon {
     width: 105px;
     margin: 4px 56px 0 -3px;

@@ -28,7 +28,6 @@
   align-items: center;
   width: max-content;
   height: 40px;
-  /* one group per loop: ~33px per second */
   animation: 29s linear 0s infinite normal none running benefits-scroll;
 }
 
@@ -38,11 +37,9 @@
   gap: 32px;
   flex-shrink: 0;
   height: 40px;
-  /* same gap after the last item: the next group follows seamlessly */
   padding-right: 32px;
 }
 
-/* icon in a circle + text (design: Magallanes Bold 18/22, 12px apart) */
 .marquee-item {
   display: flex;
   align-items: center;

@@ -57,7 +57,6 @@ function initProductGallery(section) {
   prevArrow?.addEventListener("click", () => step(-1));
   nextArrow?.addEventListener("click", () => step(1));
 
-
   const lightbox = document.getElementById("product-lightbox");
 
   if (!lightbox) {
@@ -111,7 +110,6 @@ function initPurchaseOptions(section) {
 
   plans.forEach(({ card, radio }) => {
     radio?.addEventListener("change", () => selectPlan(card));
-
 
     card.addEventListener("click", (event) => {
       if (event.target.closest(".product-selection, .two-pod-selection")) {

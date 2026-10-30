@@ -8,7 +8,6 @@ footer {
   overflow: hidden;
   background-color: rgb(6, 59, 91);
   color: var(--color-white);
-  /* room for the corner picture under the text (design) */
   padding-bottom: 100px;
 }
 
@@ -42,7 +41,6 @@ footer {
 .newsletter-description {
   display: block;
   margin: 26px 0 0;
-  /* Avenir 45 Book in the design */
   font-weight: 400;
   font-size: 13px;
   line-height: 26px;
@@ -53,7 +51,6 @@ footer {
   display: flex;
   align-items: center;
   gap: 21px;
-  /* the Avenir line box is taller than the text box in Figma */
   margin-top: 15px;
   width: 100%;
   flex-direction: column;
@@ -84,14 +81,12 @@ footer .email-input input::placeholder {
   color: rgb(168, 168, 168);
 }
 
-/* keyboard focus: white ring, visible on the dark footer background */
 footer .email-input input:focus-visible,
 .subscribe-button:focus-visible {
   outline: 2px solid var(--color-white);
   outline-offset: 2px;
 }
 
-/* "Thank you" message after subscribing (empty until the form is sent) */
 .newsletter-status {
   margin: 0;
   font-size: 12px;
@@ -335,7 +330,6 @@ footer .email-input input:focus-visible,
     font-size: calc(14px + 2 * var(--fluid));
   }
 
-  /* social icons above the menu: side by side the menu gets too narrow */
   .footer-column.last-column {
     display: grid;
     grid-template-columns: 1fr;
@@ -461,10 +455,8 @@ footer .email-input input:focus-visible,
   .footer-container {
     display: grid;
     grid-template-columns: 532px 1fr;
-    /* 124px on 1440, 40px on 1101 */
     column-gap: clamp(40px, 24.8vw - 233px, 124px);
     width: 100%;
-    /* wider than the 1440 design: the content stays centred */
     max-width: var(--container-width);
     padding: 82px 40px 0 64px;
   }

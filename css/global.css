@@ -42,8 +42,6 @@
   font-weight: 800;
 }
 
-/* design tokens: values used in many places (colours, fonts, radii, widths,
-   section spacing); change them here to change them everywhere */
 :root {
   --color-text: #30204a;
   --color-primary: #5e2ca5;
@@ -71,9 +69,6 @@
   --content-width: 1200px;
   --section-spacing: 56px;
 
-  /* tablets (768-1100px): 0px at 768px, ~1px at 1100px. A size that grows
-     from M (phone) to D (desktop) is calc(M + (D - M) * var(--fluid)), so all
-     texts scale together instead of each one on its own */
   --fluid: calc((100vw - 768px) / 333);
 }
 
@@ -114,11 +109,6 @@ img {
   white-space: nowrap;
   border: 0;
 }
-
-/* ===== shared components =====
-   .btn   - purple pill button; .btn--gradient - the newsletter variant
-   .label - small uppercase badge above a section title
-   .title - section title (h1/h2); sections only override what differs */
 
 .btn {
   display: flex;
@@ -172,11 +162,9 @@ img {
   font-synthesis: none;
 }
 
-/* line break that exists only in the desktop design */
 .desktop-break {
   display: none;
 }
-
 
 .title-accent {
   color: var(--color-primary);

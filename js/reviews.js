@@ -24,7 +24,6 @@ function initReviews() {
     return;
   }
 
-  // position of an element inside the scrolled strip
   const offsetInStrip = (element) =>
     element.getBoundingClientRect().left -
     carousel.getBoundingClientRect().left +
@@ -50,7 +49,6 @@ function initReviews() {
 
   slider.after(dots);
 
-  // one card (+ the gap) per click
   const step = () =>
     cards.length > 1
       ? cards[1].getBoundingClientRect().left -
@@ -65,7 +63,6 @@ function initReviews() {
   );
 
   function update() {
-    // active dot: the slide closest to the start of the strip
     let closest = 0;
     let smallest = Infinity;
 
@@ -85,7 +82,6 @@ function initReviews() {
       else dot.removeAttribute("aria-current");
     });
 
-    // arrows are disabled at the ends only when the strip can scroll at all
     const end = carousel.scrollWidth - carousel.clientWidth - 1;
     const scrolls = end > 0;
     if (leftArrow) leftArrow.disabled = scrolls && carousel.scrollLeft <= 1;

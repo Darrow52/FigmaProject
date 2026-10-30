@@ -154,7 +154,6 @@
 }
 
 @media (min-width: 768px) {
-
   .section--challenge {
     --kids-height: clamp(170px, 22vw, 225px);
     --kids-right: 18px;
@@ -290,8 +289,6 @@
     padding-right: calc(
       var(--kids-right) + var(--kids-height) * 470 / 283 + 36px
     );
-    /* 60px below the text too: when the text gets taller on narrower
-       screens it does not stick to the bottom edge */
     padding-bottom: 60px;
     padding-left: calc(max(0px, (100% - var(--container-width)) / 2) + 158px);
     height: auto;

@@ -25,7 +25,6 @@
   margin: 12px auto 0;
 }
 
-/* second line of the heading is purple */
 .actually-wear-accent {
   display: block;
   color: var(--color-primary);
